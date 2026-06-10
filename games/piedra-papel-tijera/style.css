@@ -1,0 +1,13 @@
+.computer-pick {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+}
+
+.computer-pick .label {
+    opacity: 0.7;
+    margin-right: 0.25rem;
+}
+
+.computer-pick .pick {
+    font-weight: 600;
+}

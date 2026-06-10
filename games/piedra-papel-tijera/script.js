@@ -5,10 +5,12 @@ const computerScoreSpan = document.getElementById('computer-score');
 const roundResultP = document.getElementById('round-result');
 const gameStatusP = document.getElementById('game-status');
 const resetButton = document.getElementById('reset');
+const computerPickSpan = document.getElementById('computer-pick');
 
 // Constantes del juego
 const CHOICES = ['piedra', 'papel', 'tijera'];
 const WINNING_SCORE = 5;
+const EMOJIS = { piedra: '🪨', papel: '📄', tijera: '✂️' };
 
 // Inicializar el marcador
 let playerScore = 0;
@@ -35,6 +37,7 @@ function playRound(playerChoice) {
     }
 
     const computerChoice = getComputerChoice();
+    computerPickSpan.textContent = `${EMOJIS[computerChoice]} ${computerChoice}`;
     let result;
 
     if (playerChoice === computerChoice) {
@@ -86,6 +89,7 @@ function resetGame() {
     computerScoreSpan.textContent = computerScore;
     roundResultP.textContent = 'Elige una opción para jugar.';
     gameStatusP.textContent = '';
+    computerPickSpan.textContent = '—';
 
     buttons.forEach(button => {
         button.disabled = false;

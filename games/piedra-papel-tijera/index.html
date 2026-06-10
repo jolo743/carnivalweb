@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, Papel o Tijera</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="game">
         <h1>Piedra, Papel o Tijera</h1>
@@ -22,12 +24,16 @@
         </section>
 
         <section class="choices" aria-label="Elige tu jugada">
-            <button type="button" class="choice" data-choice="piedra" aria-label="Piedra">✊ Piedra</button>
-            <button type="button" class="choice" data-choice="papel" aria-label="Papel">✋ Papel</button>
-            <button type="button" class="choice" data-choice="tijera" aria-label="Tijera">✌️ Tijera</button>
+            <button type="button" class="choice" data-choice="piedra" aria-label="Piedra">🪨 Piedra</button>
+            <button type="button" class="choice" data-choice="papel" aria-label="Papel">📄 Papel</button>
+            <button type="button" class="choice" data-choice="tijera" aria-label="Tijera">✂️ Tijera</button>
         </section>
 
         <section class="result" aria-live="polite">
+            <p class="computer-pick">
+                <span class="label">Computadora:</span>
+                <span class="pick" id="computer-pick">—</span>
+            </p>
             <p class="round" id="round-result">Elige una opción para jugar.</p>
             <p class="status" id="game-status"></p>
         </section>
@@ -37,4 +43,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
