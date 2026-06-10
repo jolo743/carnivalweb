@@ -4,42 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra, Papel o Tijera</title>
+    <title>Piedra, Papel o Tijeras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="game">
-        <h1>Piedra, Papel o Tijera</h1>
 
-        <section class="scoreboard" aria-label="Marcador">
-            <div class="player">
-                <span class="label">Jugador</span>
-                <span class="score" id="player-score">0</span>
-            </div>
-            <div class="player">
-                <span class="label">Máquina:</span>
-                <span class="score" id="computer-score">0</span>
-            </div>
-        </section>
+    <h1>¡Piedra, Papel o Tijeras!</h1>
 
-        <section class="choices" aria-label="Elige tu jugada">
-            <button type="button" class="choice" data-choice="piedra" aria-label="Piedra">🪨 Piedra</button>
-            <button type="button" class="choice" data-choice="papel" aria-label="Papel">📄 Papel</button>
-            <button type="button" class="choice" data-choice="tijera" aria-label="Tijera">✂️ Tijera</button>
-        </section>
+    <!-- Sección del marcador -->
+    <div class="marcador">
+        Usuario: <span id="puntos-usuario">0</span> | Computadora: <span id="puntos-computadora">0</span>
+    </div>
 
-        <section class="result" aria-live="polite">
-            <p class="computer-pick">
-                <span class="label">Máquina:</span>
-                <span class="pick" id="computer-pick">—</span>
-            </p>
-            <p class="round" id="round-result">Elige una opción para jugar.</p>
-            <p class="status" id="game-status"></p>
-        </section>
+    <div class="botones">
+        <button onclick="jugar('piedra')">🪨 Piedra</button>
+        <button onclick="jugar('papel')">📄 Papel</button>
+        <button onclick="jugar('tijeras')">✂️ Tijeras</button>
+    </div>
 
-        <button type="button" id="reset" class="reset" hidden>Reiniciar</button>
-    </main>
+    <div id="resultado" class="resultado">Elige una opción para empezar.</div>
+
+    <!-- Botón de reinicio -->
+    <button class="btn-reinicio" onclick="reiniciarJuego()">🔄 Reiniciar Marcador</button>
 
     <script src="script.js"></script>
 </body>
