@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarnivalWeb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Rubik:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#incio" class="nav-logo">Carnival Arcade</a>
+
+            <ul class="nav-links">
+                <li><a href="#parejas">parejas</a></li>
+                <li><a href="#ppt">piedra papel tijera</a></li>
+                <li><a href="#ruleta">ruleta de la suerte</a></li>
+                <li><a href="#trileros">trileros</a></li>
+                <li><a href="#tiro">tiro al blanco</a></li>
+                <li><a href="#nosotros">nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="hero-title">
+                ADENTRATE A LA FERIA ONLINE
+            </h1>
+            <p class="hero-subtitle">En esta increible feria vas a encontrar juegos maravillosos desde los trileros hasta una ruleta.
+                entra y no te pierdas esta increible oportunidad.
+            </p>
+        </section>
+
+        <section class="games-section">
+            <h2 class="section-title">Juegos disponibles</h2>
+
+            <ul class="games-grid">
+                <li id="parejas">
+                    <article class="game-card">
+                        <h3 class="game-title">Parejas</h3>
+                        <img src="./src/images/parejas.png" alt="Parejas" class="game-image">
+                        <p class="game-description">Seguro que ya conoces este clásico juego de memoria. 
+                            Encuentra las parejas de cartas iguales antes de que se te acaben los intentos. 
+                            Parece fácil al principio, pero recordar dónde está cada carta es todo un reto. 
+                            ¡Pon a prueba tu memoria y descubre cuántas parejas puedes conseguir!</p>
+                        <button class="game-button"><a href="./games/parejas/index.html" class="button-link">Jugar</a></button>
+                    </article>
+                </li>
+                <li>
+                    <article id="ppt" class="game-card">
+                        <h3 class="game-title">Piedra Papel Tijeras</h3>
+                        <img src="./src/images/piedra-papel-tiejras.png" alt="Piedra Papel Tijera" class="game-image">
+                        <p class="game-description">El duelo más famoso de todos los tiempos llega en versión digital. 
+                            Elige piedra, papel o tijeras y enfréntate a la máquina en partidas rápidas y emocionantes. 
+                            ¿Tendrás la estrategia necesaria para anticiparte a cada movimiento y conseguir la victoria?</p>
+                        <button class="game-button"><a href="./games/piedra-papel-tijera/index.html" class="button-link">Jugar</a></button>
+                    </article>
+                </li>
+                <li>
+                    <article id="ruleta" class="game-card">
+                        <h3 class="game-title">Ruleta de la suerte</h3>
+                        <img src="./src/images/ruleta.png" alt="Ruleta de la suerte" class="game-image">
+                        <p class="game-description">¡Haz girar la ruleta y deja que la suerte decida! 
+                            Cada giro puede esconder grandes premios, sorpresas inesperadas o desafíos especiales. 
+                            Nunca sabes dónde se detendrá, así que cruza los dedos y prueba tu fortuna.</p>
+                        <button class="game-button"><a href="./games/random-lucky/index.html" class="button-link">Jugar</a></button>
+                    </article>
+                </li>
+                <li>
+                    <article id="trileros" class="game-card">
+                        <h3 class="game-title">Trileros</h3>
+                        <img src="./src/images/trileros.png" alt="trileros" class="game-image">
+                        <p class="game-description">Mantén los ojos bien abiertos y sigue la ficha sin perderla de vista. 
+                            Los vasos se moverán cada vez más rápido para ponerte las cosas difíciles. 
+                            ¿Serás capaz de encontrar la posición correcta o caerás en el engaño del trilero?</p>
+                        <button class="game-button"><a href="./games/trileros/index.html" class="button-link">Jugar</a></button>
+                    </article>
+                </li>
+                <li>
+                    <article id="tiro" class="game-card">
+                        <h3 class="game-title">Tiro al blanco</h3>
+                        <img src="./src/images/tiro-al-blanco.png" alt="Tiro al blanco" class="game-image">
+                        <p class="game-description">Afina tu puntería y demuestra que tienes un pulso de campeón. 
+                            Apunta a los objetivos y consigue la máxima puntuación antes de que se acabe el tiempo. 
+                            Cuanto más preciso seas, mayores serán tus posibilidades de alcanzar la victoria.</p>
+                        <button class="game-button"><a href="./games/tiro-al-blanco/index.html" class="button-link">Jugar</a></button>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section id="nosotros" class="about-section">
+            <h2 class="section-title">Sobre nosotros</h2>
+            <p class="about-text">Texto sobre esta pagina web de juegos de feria.</p>
+        </section>
+
+        <footer class="main-footer">
+            <h3 class="footer-logo">CarnivalWeb</h3>
+        </footer>
+    </main>
+</body>
+</html>
