@@ -93,7 +93,7 @@
               position: relative;
               width: 400px;
               height: 400px;
-              margin: 14px auto 18px;
+              margin: 36px auto 18px;
           }
 
           /* Puntero/flecha de la ruleta */
@@ -111,14 +111,17 @@
               filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
           }
 
-          /* Canvas donde se dibuja la ruleta */
-          #wheelCanvas {
+          /* Imagen de la ruleta */
+          #wheelImage {
               width: 400px;
               height: 400px;
               border-radius: 50%;
               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
               transition: transform 4s cubic-bezier(0.17, 0.67, 0.21, 0.99);
               transform-origin: 50% 50%;
+              display: block;
+              user-select: none;
+              -webkit-user-drag: none;
           }
 
           /* Centro de la ruleta */
@@ -424,10 +427,10 @@
               .wheel-container {
                   width: 320px;
                   height: 320px;
-                  margin: 10px auto 14px;
+                  margin: 30px auto 14px;
               }
 
-              #wheelCanvas {
+              #wheelImage {
                   width: 320px;
                   height: 320px;
               }
@@ -480,9 +483,10 @@
               .wheel-container {
                   width: 280px;
                   height: 280px;
+                  margin: 24px auto 14px;
               }
 
-              #wheelCanvas {
+              #wheelImage {
                   width: 280px;
                   height: 280px;
               }

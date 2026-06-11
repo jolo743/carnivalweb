@@ -26,21 +26,6 @@
               "tu sonrisa tiene el poder de alegrar el día de alguien."
           ];
 
-          // Paleta mejorada de la ruleta: 8 secciones con gradiente cálido/frío
-          // que armoniza con el fondo lila (#667eea → #764ba2) y el botón
-          // rosa-coral (#f093fb → #f5576c). Cada color se usa como base de un
-          // gradiente radial en `drawWheel`.
-          const wheelColors = [
-              "#FF6B9D", // rosa intenso
-              "#FEC868", // dorado cálido
-              "#FF8C42", // naranja coral
-              "#6BCB77", // verde fresco
-              "#4D96FF", // azul vibrante
-              "#9B72CF", // morado
-              "#FF6B6B", // coral rojo
-              "#36D6E0"  // turquesa
-          ];
-
           // Estado de la aplicación
           let isSpinning = false;
           let spinCount = 0;
@@ -49,8 +34,7 @@
           // ============================================
           // ELEMENTOS DEL DOM
           // ============================================
-          const wheelCanvas = document.getElementById('wheelCanvas');
-          const wheelCtx = wheelCanvas.getContext('2d');
+          const wheelImage = document.getElementById('wheelImage');
           const spinButton = document.getElementById('spinButton');
           const nameInput = document.getElementById('nameInput');
           const errorMessage = document.getElementById('errorMessage');
@@ -71,66 +55,6 @@
           }
           resizeConfettiCanvas();
           window.addEventListener('resize', resizeConfettiCanvas);
-
-          // ============================================
-          // DIBUJAR LA RULETA EN EL CANVAS
-          // ============================================
-          function drawWheel() {
-              const centerX = wheelCanvas.width / 2;
-              const centerY = wheelCanvas.height / 2;
-              const radius = wheelCanvas.width / 2 - 5;
-              const sectionAngle = (2 * Math.PI) / wheelColors.length;
-
-              // Limpia el canvas antes de redibujar (importante para que la ruleta
-              // sea visible tras cada interacción)
-              wheelCtx.clearRect(0, 0, wheelCanvas.width, wheelCanvas.height);
-
-              // Dibuja cada sección de la ruleta con un gradiente radial
-              wheelColors.forEach((color, index) => {
-                  const startAngle = index * sectionAngle;
-                  const endAngle = startAngle + sectionAngle;
-
-                  // Rellenar la sección con un gradiente radial (más claro en el
-                  // centro, más oscuro en el borde) para dar profundidad.
-                  const gradient = wheelCtx.createRadialGradient(
-                      centerX, centerY, radius * 0.15,
-                      centerX, centerY, radius
-                  );
-                  gradient.addColorStop(0, lightenColor(color, 0.35));
-                  gradient.addColorStop(1, color);
-
-                  wheelCtx.beginPath();
-                  wheelCtx.moveTo(centerX, centerY);
-                  wheelCtx.arc(centerX, centerY, radius, startAngle, endAngle);
-                  wheelCtx.closePath();
-                  wheelCtx.fillStyle = gradient;
-                  wheelCtx.fill();
-
-                  // Borde de la sección
-                  wheelCtx.strokeStyle = '#fff';
-                  wheelCtx.lineWidth = 3;
-                  wheelCtx.stroke();
-              });
-
-              // Dibuja el borde exterior de la ruleta
-              wheelCtx.beginPath();
-              wheelCtx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-              wheelCtx.strokeStyle = '#333';
-              wheelCtx.lineWidth = 5;
-              wheelCtx.stroke();
-          }
-
-          // Aclara un color hexadecimal en una proporción (0 = igual, 1 = blanco)
-          function lightenColor(hex, amount) {
-              const num = parseInt(hex.replace('#', ''), 16);
-              let r = (num >> 16) & 0xff;
-              let g = (num >> 8) & 0xff;
-              let b = num & 0xff;
-              r = Math.round(r + (255 - r) * amount);
-              g = Math.round(g + (255 - g) * amount);
-              b = Math.round(b + (255 - b) * amount);
-              return `rgb(${r}, ${g}, ${b})`;
-          }
 
           // ============================================
           // WEB AUDIO API - SONIDO DE GIRO
@@ -279,12 +203,12 @@
 
               // Aplica la rotación con animación CSS. Reiniciamos la transformación
               // antes para forzar el reinicio de la transición en cada giro.
-              wheelCanvas.style.transition = 'none';
-              wheelCanvas.style.transform = `rotate(${currentRotation - totalRotation}deg)`;
+              wheelImage.style.transition = 'none';
+              wheelImage.style.transform = `rotate(${currentRotation - totalRotation}deg)`;
               // Forzar reflow para que el navegador registre la posición inicial
-              void wheelCanvas.offsetWidth;
-              wheelCanvas.style.transition = 'transform 4s cubic-bezier(0.17, 0.67, 0.21, 0.99)';
-              wheelCanvas.style.transform = `rotate(${currentRotation}deg)`;
+              void wheelImage.offsetWidth;
+              wheelImage.style.transition = 'transform 4s cubic-bezier(0.17, 0.67, 0.21, 0.99)';
+              wheelImage.style.transform = `rotate(${currentRotation}deg)`;
 
               // Reproduce ticks durante el giro (simula el sonido de la ruleta)
               let tickInterval = setInterval(playTick, 200);
@@ -365,5 +289,4 @@
           // ============================================
           // INICIALIZACIÓN
           // ============================================
-          // Dibuja la ruleta al cargar la página
-          drawWheel();
+          // La ruleta es una imagen (ruleta.png), no necesita dibujarse.
