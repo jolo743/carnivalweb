@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Lucky — Ruleta de la Suerte Online</title>
+    <meta name="description" content="Gira la ruleta de la suerte y descubre un mensaje positivo personalizado con tu nombre. Juego gratuito y divertido.">
+    <meta name="theme-color" content="#764ba2">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#spinButton">Saltar a la ruleta</a>
+
+    <!-- Lienzo de confeti: decorativo, se ignora en lectores de pantalla -->
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+    <main class="container" id="main">
+        <header class="app-header">
+            <h1>🎰 Random Lucky</h1>
+            <p class="subtitle">Gira la ruleta y descubre tu mensaje de la suerte</p>
+        </header>
+
+        <!-- Formulario para introducir el nombre antes de girar -->
+        <form class="input-group" id="nameForm" novalidate>
+            <label for="nameInput">Tu nombre</label>
+            <input
+                type="text"
+                id="nameInput"
+                name="name"
+                placeholder="Escribe tu nombre aquí..."
+                maxlength="20"
+                autocomplete="given-name"
+                aria-required="true"
+                aria-describedby="errorMessage"
+            >
+            <p class="error-message" id="errorMessage" role="alert"></p>
+        </form>
+
+        <!-- Sección principal: la ruleta -->
+        <section class="wheel-section" aria-labelledby="wheelTitle">
+            <h2 id="wheelTitle" class="visually-hidden">Ruleta de la suerte</h2>
+
+            <figure class="wheel-container" aria-label="Ruleta de la suerte con 8 secciones de colores">
+                <div class="pointer" aria-hidden="true"></div>
+                <img
+                    id="wheelImage"
+                    src="ruleta.png"
+                    alt="Ruleta giratoria con 8 secciones de colores vibrantes"
+                    width="400"
+                    height="400"
+                >
+            </figure>
+
+            <!-- Botón principal: gira la ruleta -->
+            <button
+                type="submit"
+                form="nameForm"
+                class="spin-button"
+                id="spinButton"
+                aria-describedby="counterStatus"
+            >
+                🎲 Girar la ruleta
+            </button>
+
+            <!-- Contador de giros: anunciado en directo a lectores de pantalla -->
+            <p class="counter" id="counterStatus" aria-live="polite" aria-atomic="true">
+                Giros realizados: <strong id="spinCounter">0</strong>
+            </p>
+        </section>
+
+        <!-- Sección de instrucciones -->
+        <section class="instructions" aria-labelledby="instructionsTitle">
+            <h2 id="instructionsTitle">¿Cómo se juega?</h2>
+            <ol>
+                <li>Escribe tu nombre en el campo superior.</li>
+                <li>Pulsa el botón <strong>“Girar la ruleta”</strong>.</li>
+                <li>Espera a que la ruleta se detenga y descubre tu mensaje de la suerte.</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Modal con el resultado: se muestra al terminar el giro -->
+    <div
+        class="result-overlay"
+        id="resultContainer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="resultEyebrow"
+        aria-hidden="true"
+    >
+        <article class="result-card">
+            <button type="button" class="result-close" id="resultClose" aria-label="Cerrar mensaje">&times;</button>
+            <div class="result-icon" aria-hidden="true">✨</div>
+            <h2 class="result-eyebrow" id="resultEyebrow">Tu mensaje de la suerte</h2>
+            <p class="result-message" id="resultText" aria-live="assertive" aria-atomic="true"></p>
+        </article>
+    </div>
+
+    <noscript>
+        <p class="noscript-warning">Para jugar a la Ruleta de la Suerte necesitas activar JavaScript en tu navegador.</p>
+    </noscript>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

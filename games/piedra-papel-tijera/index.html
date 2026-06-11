@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>¡Piedra, Papel o Tijeras!</h1>
+
+    <!-- Sección del marcador -->
+    <div class="marcador">
+        <div class="marcador-item">
+            <span class="marcador-label">Jugador</span>
+            <span id="puntos-usuario" class="marcador-puntos">0</span>
+        </div>
+        <div class="marcador-separator">vs</div>
+        <div class="marcador-item">
+            <span class="marcador-label">Computadora</span>
+            <span id="puntos-computadora" class="marcador-puntos">0</span>
+        </div>
+    </div>
+
+    <!-- Zona de elecciones visuales -->
+    <div class="zona-elecciones">
+        <div class="eleccion-container">
+            <div class="eleccion-label">Tú elegiste</div>
+            <div id="eleccion-usuario" class="eleccion-display">
+                <span class="eleccion-placeholder">?</span>
+            </div>
+        </div>
+
+        <div class="vs-badge">VS</div>
+
+        <div class="eleccion-container">
+            <div class="eleccion-label">Computadora eligió</div>
+            <div id="eleccion-computadora" class="eleccion-display">
+                <span class="eleccion-placeholder">?</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones de juego -->
+    <div class="botones">
+        <button id="btn-piedra" class="btn-juego">
+            <span class="btn-icon">🪨</span>
+            <span class="btn-text">Piedra</span>
+        </button>
+        <button id="btn-papel" class="btn-juego">
+            <span class="btn-icon">📄</span>
+            <span class="btn-text">Papel</span>
+        </button>
+        <button id="btn-tijeras" class="btn-juego">
+            <span class="btn-icon">✂️</span>
+            <span class="btn-text">Tijeras</span>
+        </button>
+    </div>
+
+    <!-- Resultado -->
+    <div id="resultado" class="resultado">Elige una opción para empezar.</div>
+
+    <!-- Botón de reinicio -->
+    <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar Marcador</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
