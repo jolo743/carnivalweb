@@ -7,7 +7,7 @@
 
           body {
               min-height: 100vh;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              background: linear-gradient(135deg, #a20d0d 0%, #761010 100%);
               display: flex;
               justify-content: center;
               align-items: center;
@@ -29,7 +29,7 @@
 
           /* ===== ENCABEZADO COMPACTO ===== */
           h1 {
-              color: #764ba2;
+              color: #790b0b;
               font-size: 2em;
               margin-bottom: 4px;
               text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -77,7 +77,7 @@
           }
 
           input[type="text"]:focus {
-              border-color: #764ba2;
+              border-color: #920a0a;
           }
 
           .error-message {
@@ -136,7 +136,7 @@
           }
 
           .spin-button {
-              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              background: linear-gradient(135deg, #831b1b 0%, #b84c4c 100%);
               color: white;
               border: none;
               padding: 14px 44px;
@@ -165,12 +165,12 @@
           /* ===== CONTADOR (DISCRETO, DEBAJO DEL BOTÓN) ===== */
           .counter {
               padding: 4px 16px;
-              color: #888;
+              color: #ceb233;
               font-size: 0.85em;
           }
 
           .counter strong {
-              color: #764ba2;
+              color: #8b1d1d;
               font-weight: bold;
           }
 
@@ -227,7 +227,7 @@
               right: 16px;
               background: transparent;
               border: none;
-              color: #764ba2;
+              color: #861919;
               font-size: 1.8em;
               line-height: 1;
               cursor: pointer;
@@ -244,7 +244,7 @@
           .result-icon {
               font-size: 3.4em;
               margin-bottom: 6px;
-              filter: drop-shadow(0 4px 8px rgba(245, 87, 108, 0.3));
+              filter: drop-shadow(0 4px 8px rgba(184, 6, 29, 0.3));
               animation: iconBounce 1.2s ease-in-out infinite;
           }
 
@@ -255,7 +255,7 @@
 
           .result-eyebrow {
               display: inline-block;
-              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              background: linear-gradient(135deg, #e1a53c 0%, #f5576c 100%);
               color: #ffffff;
               font-size: 0.78em;
               font-weight: bold;
@@ -268,7 +268,7 @@
           }
 
           .result-message {
-              color: #2d1850;
+              color: #9a2020;
               font-size: 1.2em;
               line-height: 1.5;
               font-weight: 500;
@@ -276,7 +276,7 @@
 
           .result-message .result-name {
               display: block;
-              color: #764ba2;
+              color: #761a1a;
               font-size: 1.4em;
               font-weight: 800;
               margin-bottom: 8px;
@@ -288,13 +288,13 @@
               margin-top: 18px;
               padding: 14px 18px;
               background: rgba(118, 75, 162, 0.07);
-              border-left: 4px solid #764ba2;
+              border-left: 4px solid #c09331;
               border-radius: 10px;
               text-align: left;
           }
 
           .instructions h2 {
-              color: #764ba2;
+              color: #7d1e1e;
               font-size: 0.95em;
               font-weight: bold;
               margin-bottom: 8px;
@@ -305,7 +305,7 @@
           .instructions ol {
               list-style: decimal;
               padding-left: 20px;
-              color: #555;
+              color: #8e1f1f;
               font-size: 0.88em;
               line-height: 1.55;
           }
@@ -315,7 +315,7 @@
           }
 
           .instructions strong {
-              color: #764ba2;
+              color: #c0a01e;
           }
 
           /* ===== UTILIDADES DE ACCESIBILIDAD ===== */
@@ -335,7 +335,7 @@
               position: absolute;
               top: -100px;
               left: 8px;
-              background: #764ba2;
+              background: #a77724;
               color: #ffffff;
               padding: 10px 16px;
               border-radius: 8px;
