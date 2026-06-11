@@ -124,23 +124,7 @@
               -webkit-user-drag: none;
           }
 
-          /* Centro de la ruleta */
-          .wheel-center {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 70px;
-              height: 70px;
-              background: #fff;
-              border-radius: 50%;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 2em;
-              z-index: 5;
-          }
+        
 
           /* ===== ZONA DE ACCIÓN (BOTÓN + CONTADOR) ===== */
           .action-bar {
