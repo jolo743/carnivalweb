@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>¡Piedra, Papel o Tijeras!</h1>
+
+    <!-- Sección del marcador -->
+    <div class="marcador">
+        Usuario: <span id="puntos-usuario">0</span> | Computadora: <span id="puntos-computadora">0</span>
+    </div>
+
+    <div class="botones">
+        <button onclick="jugar('piedra')">🪨 Piedra</button>
+        <button onclick="jugar('papel')">📄 Papel</button>
+        <button onclick="jugar('tijeras')">✂️ Tijeras</button>
+    </div>
+
+    <div id="resultado" class="resultado">Elige una opción para empezar.</div>
+
+    <!-- Botón de reinicio -->
+    <button class="btn-reinicio" onclick="reiniciarJuego()">🔄 Reiniciar Marcador</button>
+
+    <script src="script.js"></script>   
+</body>
+
+</html>
