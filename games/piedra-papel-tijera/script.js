@@ -1,17 +1,37 @@
 // Variables globales para el marcador
 let victoriasUsuario = 0;
 let victoriasComputadora = 0;
-const PUNTO_MAXIMO = 7; 
+const PUNTO_MAXIMO = 7;
+
+// Mapeo de opciones a emojis
+const emojis = {
+    'piedra': '🪨',
+    'papel': '📄',
+    'tijeras': '✂️'
+};
 
 // Referencias a los elementos del DOM
 const puntosUsuarioTxt = document.getElementById('puntos-usuario');
 const puntosComputadoraTxt = document.getElementById('puntos-computadora');
 const resultadoTxt = document.getElementById('resultado');
+const eleccionUsuarioDisplay = document.getElementById('eleccion-usuario');
+const eleccionComputadoraDisplay = document.getElementById('eleccion-computadora');
 
 const btnPiedra = document.getElementById('btn-piedra');
 const btnPapel = document.getElementById('btn-papel');
 const btnTijeras = document.getElementById('btn-tijeras');
 const btnReinicio = document.getElementById('btn-reinicio');
+
+// Función para actualizar la visualización de la elección
+function actualizarEleccion(elemento, eleccion, esComputadora = false) {
+    if (eleccion) {
+        elemento.innerHTML = `<span>${emojis[eleccion]}</span>`;
+        elemento.classList.add('active');
+    } else {
+        elemento.innerHTML = '<span class="eleccion-placeholder">?</span>';
+        elemento.classList.remove('active');
+    }
+}
 
 // Función principal del juego
 function jugar(eleccionUsuario) {
@@ -23,20 +43,24 @@ function jugar(eleccionUsuario) {
     const opciones = ['piedra', 'papel', 'tijeras'];
     const eleccionComputadora = opciones[Math.floor(Math.random() * 3)];
 
-    let mensaje = `Elegiste <b>${eleccionUsuario}</b>. La computadora eligió <b>${eleccionComputadora}</b>.<br><br>`;
+    // Actualizar visualización de elecciones
+    actualizarEleccion(eleccionUsuarioDisplay, eleccionUsuario);
+    actualizarEleccion(eleccionComputadoraDisplay, eleccionComputadora, true);
+
+    let mensaje = '';
 
     // Lógica de la ronda
     if (eleccionUsuario === eleccionComputadora) {
-        mensaje += "¡Es un empate! 😐";
+        mensaje = "¡Es un empate! 😐";
     } else if (
         (eleccionUsuario === 'piedra' && eleccionComputadora === 'tijeras') ||
         (eleccionUsuario === 'papel' && eleccionComputadora === 'piedra') ||
         (eleccionUsuario === 'tijeras' && eleccionComputadora === 'papel')
     ) {
-        mensaje += "¡Ganaste esta ronda! 🎉";
+        mensaje = "¡Ganaste esta ronda! 🎉";
         victoriasUsuario++;
     } else {
-        mensaje += "¡Perdiste esta ronda! 💀";
+        mensaje = "¡Perdiste esta ronda! 💀";
         victoriasComputadora++;
     }
 
@@ -67,11 +91,15 @@ function desactivarBotones(estado) {
 function reiniciarJuego() {
     victoriasUsuario = 0;
     victoriasComputadora = 0;
-    
+
     puntosUsuarioTxt.textContent = victoriasUsuario;
     puntosComputadoraTxt.textContent = victoriasComputadora;
     resultadoTxt.innerHTML = "El juego se ha reiniciado. ¡Elige otra vez!";
-    
+
+    // Reiniciar visualización de elecciones
+    actualizarEleccion(eleccionUsuarioDisplay, null);
+    actualizarEleccion(eleccionComputadoraDisplay, null);
+
     // Volver a activar los botones para una nueva partida
     desactivarBotones(false);
 }
