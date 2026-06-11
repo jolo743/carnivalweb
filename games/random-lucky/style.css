@@ -1,0 +1,507 @@
+  * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+
+          body {
+              min-height: 100vh;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px;
+              overflow-x: hidden;
+          }
+
+          /* ===== CONTENEDOR PRINCIPAL ===== */
+          .container {
+              background: rgba(255, 255, 255, 0.95);
+              border-radius: 20px;
+              padding: 28px 32px;
+              max-width: 560px;
+              width: 100%;
+              box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+              text-align: center;
+              position: relative;
+          }
+
+          /* ===== ENCABEZADO COMPACTO ===== */
+          h1 {
+              color: #764ba2;
+              font-size: 2em;
+              margin-bottom: 4px;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+              animation: titlePulse 2s ease-in-out infinite;
+              letter-spacing: 0.5px;
+          }
+
+          @keyframes titlePulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.05); }
+          }
+
+          .subtitle {
+              color: #666;
+              margin-bottom: 18px;
+              font-size: 0.88em;
+              line-height: 1.3;
+          }
+
+          /* ===== CAMPO DE NOMBRE COMPACTO ===== */
+          .input-group {
+              margin-bottom: 14px;
+              max-width: 360px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          label {
+              display: block;
+              color: #333;
+              margin-bottom: 6px;
+              font-weight: bold;
+              font-size: 0.9em;
+              text-align: left;
+          }
+
+          input[type="text"] {
+              width: 100%;
+              padding: 10px 16px;
+              font-size: 1em;
+              border: 2px solid #ddd;
+              border-radius: 10px;
+              outline: none;
+              transition: border-color 0.3s;
+          }
+
+          input[type="text"]:focus {
+              border-color: #764ba2;
+          }
+
+          .error-message {
+              color: #e74c3c;
+              font-size: 0.85em;
+              margin-top: 4px;
+              min-height: 18px;
+              text-align: left;
+          }
+
+          /* ===== RULETA (ELEMENTO PRINCIPAL) ===== */
+          .wheel-container {
+              position: relative;
+              width: 400px;
+              height: 400px;
+              margin: 36px auto 18px;
+          }
+
+          /* Puntero/flecha de la ruleta */
+          .pointer {
+              position: absolute;
+              top: -18px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 0;
+              height: 0;
+              border-left: 22px solid transparent;
+              border-right: 22px solid transparent;
+              border-top: 38px solid #e74c3c;
+              z-index: 10;
+              filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+          }
+
+          /* Imagen de la ruleta */
+          #wheelImage {
+              width: 400px;
+              height: 400px;
+              border-radius: 50%;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+              transition: transform 4s cubic-bezier(0.17, 0.67, 0.21, 0.99);
+              transform-origin: 50% 50%;
+              display: block;
+              user-select: none;
+              -webkit-user-drag: none;
+          }
+
+          /* Centro de la ruleta */
+          .wheel-center {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 70px;
+              height: 70px;
+              background: #fff;
+              border-radius: 50%;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 2em;
+              z-index: 5;
+          }
+
+          /* ===== ZONA DE ACCIÓN (BOTÓN + CONTADOR) ===== */
+          .action-bar {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              margin-top: 4px;
+          }
+
+          .spin-button {
+              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              color: white;
+              border: none;
+              padding: 14px 44px;
+              font-size: 1.1em;
+              font-weight: bold;
+              border-radius: 50px;
+              cursor: pointer;
+              transition: transform 0.2s, box-shadow 0.2s;
+              box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+          }
+
+          .spin-button:hover:not(:disabled) {
+              transform: translateY(-3px);
+              box-shadow: 0 8px 20px rgba(245, 87, 108, 0.6);
+          }
+
+          .spin-button:active:not(:disabled) {
+              transform: translateY(0);
+          }
+
+          .spin-button:disabled {
+              opacity: 0.6;
+              cursor: not-allowed;
+          }
+
+          /* ===== CONTADOR (DISCRETO, DEBAJO DEL BOTÓN) ===== */
+          .counter {
+              padding: 4px 16px;
+              color: #888;
+              font-size: 0.85em;
+          }
+
+          .counter strong {
+              color: #764ba2;
+              font-weight: bold;
+          }
+
+          /* ===== MODAL DE RESULTADO (CENTRADO EN PANTALLA) ===== */
+          .result-overlay {
+              position: fixed;
+              inset: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(45, 24, 74, 0.55);
+              backdrop-filter: blur(6px);
+              -webkit-backdrop-filter: blur(6px);
+              z-index: 10000;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.35s ease;
+              padding: 20px;
+          }
+
+          .result-overlay.show {
+              opacity: 1;
+              pointer-events: auto;
+          }
+
+          .result-card {
+              position: relative;
+              max-width: 460px;
+              width: 100%;
+              background: linear-gradient(160deg, #ffffff 0%, #f7e8ff 100%);
+              border-radius: 24px;
+              padding: 38px 32px 32px;
+              text-align: center;
+              box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35),
+                          0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+              transform: scale(0.7) translateY(20px);
+              transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+          }
+
+          .result-overlay.show .result-card {
+              transform: scale(1) translateY(0);
+              animation: resultPop 0.55s ease-out;
+          }
+
+          @keyframes resultPop {
+              0%   { transform: scale(0.5); opacity: 0; }
+              60%  { transform: scale(1.08); opacity: 1; }
+              100% { transform: scale(1); opacity: 1; }
+          }
+
+          .result-close {
+              position: absolute;
+              top: 12px;
+              right: 16px;
+              background: transparent;
+              border: none;
+              color: #764ba2;
+              font-size: 1.8em;
+              line-height: 1;
+              cursor: pointer;
+              padding: 4px 10px;
+              border-radius: 50%;
+              transition: background 0.2s, color 0.2s;
+          }
+
+          .result-close:hover {
+              background: rgba(118, 75, 162, 0.12);
+              color: #f5576c;
+          }
+
+          .result-icon {
+              font-size: 3.4em;
+              margin-bottom: 6px;
+              filter: drop-shadow(0 4px 8px rgba(245, 87, 108, 0.3));
+              animation: iconBounce 1.2s ease-in-out infinite;
+          }
+
+          @keyframes iconBounce {
+              0%, 100% { transform: translateY(0) rotate(0deg); }
+              50%      { transform: translateY(-6px) rotate(8deg); }
+          }
+
+          .result-eyebrow {
+              display: inline-block;
+              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              color: #ffffff;
+              font-size: 0.78em;
+              font-weight: bold;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              padding: 5px 14px;
+              border-radius: 20px;
+              margin-bottom: 14px;
+              box-shadow: 0 3px 10px rgba(245, 87, 108, 0.35);
+          }
+
+          .result-message {
+              color: #2d1850;
+              font-size: 1.2em;
+              line-height: 1.5;
+              font-weight: 500;
+          }
+
+          .result-message .result-name {
+              display: block;
+              color: #764ba2;
+              font-size: 1.4em;
+              font-weight: 800;
+              margin-bottom: 8px;
+              text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+          }
+
+          /* ===== SECCIÓN DE INSTRUCCIONES ===== */
+          .instructions {
+              margin-top: 18px;
+              padding: 14px 18px;
+              background: rgba(118, 75, 162, 0.07);
+              border-left: 4px solid #764ba2;
+              border-radius: 10px;
+              text-align: left;
+          }
+
+          .instructions h2 {
+              color: #764ba2;
+              font-size: 0.95em;
+              font-weight: bold;
+              margin-bottom: 8px;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+          }
+
+          .instructions ol {
+              list-style: decimal;
+              padding-left: 20px;
+              color: #555;
+              font-size: 0.88em;
+              line-height: 1.55;
+          }
+
+          .instructions ol li {
+              margin-bottom: 3px;
+          }
+
+          .instructions strong {
+              color: #764ba2;
+          }
+
+          /* ===== UTILIDADES DE ACCESIBILIDAD ===== */
+          .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              white-space: nowrap;
+              border: 0;
+          }
+
+          .skip-link {
+              position: absolute;
+              top: -100px;
+              left: 8px;
+              background: #764ba2;
+              color: #ffffff;
+              padding: 10px 16px;
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: bold;
+              z-index: 10001;
+              transition: top 0.2s;
+          }
+
+          .skip-link:focus {
+              top: 8px;
+              outline: 3px solid #f5576c;
+              outline-offset: 2px;
+          }
+
+          .noscript-warning {
+              position: fixed;
+              inset: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #ffffff;
+              color: #2d1850;
+              font-size: 1.1em;
+              text-align: center;
+              padding: 20px;
+              z-index: 99999;
+          }
+
+          /* ===== ESTADOS DE FOCUS VISIBLES (teclado) ===== */
+          button:focus-visible,
+          input:focus-visible {
+              outline: 3px solid #f5576c;
+              outline-offset: 3px;
+          }
+
+          button:focus:not(:focus-visible),
+          input:focus:not(:focus-visible) {
+              outline: none;
+          }
+
+          /* ===== CANVAS DE CONFETI ===== */
+          #confettiCanvas {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              z-index: 9999;
+          }
+
+          /* ===== RESPONSIVE: TABLET ===== */
+          @media (max-width: 600px) {
+              .container {
+                  padding: 22px 18px;
+                  border-radius: 18px;
+              }
+
+              h1 {
+                  font-size: 1.7em;
+              }
+
+              .subtitle {
+                  font-size: 0.85em;
+                  margin-bottom: 14px;
+              }
+
+              .input-group {
+                  max-width: 100%;
+              }
+
+              .wheel-container {
+                  width: 320px;
+                  height: 320px;
+                  margin: 30px auto 14px;
+              }
+
+              #wheelImage {
+                  width: 320px;
+                  height: 320px;
+              }
+
+              .wheel-center {
+                  width: 60px;
+                  height: 60px;
+                  font-size: 1.8em;
+              }
+
+              .pointer {
+                  top: -15px;
+                  border-left: 18px solid transparent;
+                  border-right: 18px solid transparent;
+                  border-top: 32px solid #e74c3c;
+              }
+
+              .spin-button {
+                  padding: 12px 36px;
+                  font-size: 1em;
+              }
+
+              .result-card {
+                  padding: 32px 24px 26px;
+              }
+
+              .result-icon {
+                  font-size: 3em;
+              }
+
+              .result-message {
+                  font-size: 1.1em;
+              }
+          }
+
+          /* ===== RESPONSIVE: MÓVIL PEQUEÑO ===== */
+          @media (max-width: 380px) {
+              body {
+                  padding: 10px;
+              }
+
+              .container {
+                  padding: 18px 14px;
+              }
+
+              h1 {
+                  font-size: 1.5em;
+              }
+
+              .wheel-container {
+                  width: 280px;
+                  height: 280px;
+                  margin: 24px auto 14px;
+              }
+
+              #wheelImage {
+                  width: 280px;
+                  height: 280px;
+              }
+
+              .wheel-center {
+                  width: 52px;
+                  height: 52px;
+                  font-size: 1.6em;
+              }
+
+              .result-card {
+                  padding: 28px 20px 22px;
+              }
+
+              .result-message {
+                  font-size: 1em;
+              }
+          }
