@@ -1,159 +1,177 @@
 ---
-name: Crimson Pavilion
+name: Electric Fairground
 colors:
-  surface: '#1d100e'
-  surface-dim: '#1d100e'
-  surface-bright: '#473532'
-  surface-container-lowest: '#180b09'
-  surface-container-low: '#261816'
-  surface-container: '#2b1c19'
-  surface-container-high: '#362623'
-  surface-container-highest: '#42312e'
-  on-surface: '#f8dcd8'
-  on-surface-variant: '#e3beb8'
-  inverse-surface: '#f8dcd8'
-  inverse-on-surface: '#3d2c2a'
-  outline: '#aa8984'
-  outline-variant: '#5a403c'
-  surface-tint: '#ffb4a8'
-  primary: '#ffb4a8'
-  on-primary: '#690000'
-  primary-container: '#8b0000'
-  on-primary-container: '#ff907f'
-  inverse-primary: '#b52619'
-  secondary: '#e9c349'
-  on-secondary: '#3c2f00'
-  secondary-container: '#af8d11'
-  on-secondary-container: '#342800'
-  tertiary: '#c8c8b0'
-  on-tertiary: '#303221'
-  tertiary-container: '#424432'
-  on-tertiary-container: '#b0b19a'
+  surface: '#0b1326'
+  surface-dim: '#0b1326'
+  surface-bright: '#31394d'
+  surface-container-lowest: '#060e20'
+  surface-container-low: '#131b2e'
+  surface-container: '#171f33'
+  surface-container-high: '#222a3d'
+  surface-container-highest: '#2d3449'
+  on-surface: '#dae2fd'
+  on-surface-variant: '#e5bcc4'
+  inverse-surface: '#dae2fd'
+  inverse-on-surface: '#283044'
+  outline: '#ac878f'
+  outline-variant: '#5c3f45'
+  surface-tint: '#ffb1c3'
+  primary: '#ffb1c3'
+  on-primary: '#66002c'
+  primary-container: '#ff4b89'
+  on-primary-container: '#590026'
+  inverse-primary: '#bb0058'
+  secondary: '#d3fbff'
+  on-secondary: '#00363a'
+  secondary-container: '#00eefc'
+  on-secondary-container: '#00686f'
+  tertiary: '#fdbc00'
+  on-tertiary: '#402d00'
+  tertiary-container: '#b98900'
+  on-tertiary-container: '#382700'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#ffdad4'
-  primary-fixed-dim: '#ffb4a8'
-  on-primary-fixed: '#410000'
-  on-primary-fixed-variant: '#920703'
-  secondary-fixed: '#ffe088'
-  secondary-fixed-dim: '#e9c349'
-  on-secondary-fixed: '#241a00'
-  on-secondary-fixed-variant: '#574500'
-  tertiary-fixed: '#e4e4cc'
-  tertiary-fixed-dim: '#c8c8b0'
-  on-tertiary-fixed: '#1b1d0e'
-  on-tertiary-fixed-variant: '#474836'
-  background: '#1d100e'
-  on-background: '#f8dcd8'
-  surface-variant: '#42312e'
+  primary-fixed: '#ffd9e0'
+  primary-fixed-dim: '#ffb1c3'
+  on-primary-fixed: '#3f0019'
+  on-primary-fixed-variant: '#8f0041'
+  secondary-fixed: '#7df4ff'
+  secondary-fixed-dim: '#00dbe9'
+  on-secondary-fixed: '#002022'
+  on-secondary-fixed-variant: '#004f54'
+  tertiary-fixed: '#ffdea2'
+  tertiary-fixed-dim: '#fdbc00'
+  on-tertiary-fixed: '#261900'
+  on-tertiary-fixed-variant: '#5c4200'
+  background: '#0b1326'
+  on-background: '#dae2fd'
+  surface-variant: '#2d3449'
 typography:
   display-lg:
-    fontFamily: Playfair Display
+    fontFamily: Rubik
     fontSize: 48px
     fontWeight: '900'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  display-lg-mobile:
-    fontFamily: Playfair Display
+  display-sm:
+    fontFamily: Rubik
     fontSize: 32px
-    fontWeight: '900'
+    fontWeight: '800'
     lineHeight: '1.2'
-  headline-md:
-    fontFamily: Playfair Display
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Rubik
     fontSize: 24px
     fontWeight: '700'
     lineHeight: '1.3'
+  headline-lg-mobile:
+    fontFamily: Rubik
+    fontSize: 20px
+    fontWeight: '700'
+    lineHeight: '1.3'
   body-lg:
-    fontFamily: Work Sans
+    fontFamily: Plus Jakarta Sans
     fontSize: 18px
-    fontWeight: '400'
+    fontWeight: '500'
     lineHeight: '1.6'
   body-md:
-    fontFamily: Work Sans
+    fontFamily: Plus Jakarta Sans
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.5'
-  label-sm:
-    fontFamily: Space Mono
-    fontSize: 12px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
     fontWeight: '700'
     lineHeight: '1'
-    letterSpacing: 0.1em
+    letterSpacing: 0.05em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: '1'
 rounded:
-  sm: 0.125rem
-  DEFAULT: 0.25rem
-  md: 0.375rem
-  lg: 0.5rem
-  xl: 0.75rem
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
   full: 9999px
 spacing:
   base: 8px
-  gutter: 24px
-  margin-mobile: 16px
-  margin-desktop: 64px
-  stripe-width: 40px
+  xs: 4px
+  sm: 12px
+  md: 24px
+  lg: 40px
+  xl: 64px
+  container-max: 1280px
+  gutter: 20px
 ---
 
 ## Brand & Style
+The brand personality is high-octane, festive, and premium, reimagining the traditional fairground through a modern "Cyber-Carnival" lens. It targets a broad demographic seeking quick-play entertainment that feels both nostalgic and cutting-edge. 
 
-The design system is built upon the "Vintage Circus Arcade" aesthetic—a sophisticated, theatrical experience that eschews modern neon for the tactile warmth of a traveling carnival at dusk. It is designed to evoke nostalgia, mystery, and high-stakes excitement, targeting an audience that appreciates craft, history, and "the show."
-
-The style is **Tactile & Ornamental**, blending Victorian-era editorial layout with early 20th-century mechanical arcade interfaces. It utilizes heavy textures (aged canvas, weathered wood, grain), ornate framing, and rhythmic vertical striping to create a sense of physical space and history. The emotional response is one of "Atmospheric Wonder"—feeling less like a digital app and more like a curated curiosity cabinet or a private backstage lounge.
+The design style is **Glassmorphic-Neon**. It utilizes a deep, atmospheric foundation to allow vibrant accents to pop. The aesthetic balances the playful nature of a carnival with the sleekness of high-end gaming interfaces. Expect high-energy motion, glowing interactive elements, and a sense of physical depth through translucent layering.
 
 ## Colors
+The palette is built on a "Midnight Base" with "Neon Fireworks." 
 
-The palette is anchored in a "Midnight Midway" dark mode, using deep, warm-toned shadows instead of pure blacks.
-
-- **Deep Crimson (#8B0000):** The primary brand color, used for structural surfaces, banners, and primary brand moments. It represents the velvet curtains of the big top.
-- **Antique Gold (#D4AF37):** Used for framing, iconography, and decorative flourishes. It provides the "brass and gilt" feel of vintage arcade machinery.
-- **Aged Cream (#F5F5DC):** The primary text and information color. It provides high legibility against dark backgrounds while maintaining a weathered, parchment-like quality.
-- **Vibrant Pink (#FF007A):** A high-energy accent reserved strictly for interactive feedback, critical calls to action, and "winning" states. It provides a sharp, modern jolt against the vintage backdrop.
-- **Dark Neutral (#1A0A0A):** The foundation background, a rich "Obsidian Wine" that keeps the UI grounded and warm.
+- **Primary (Electric Pink):** Used for primary actions, critical alerts, and branding highlights.
+- **Secondary (Cyan):** Used for progress indicators, secondary buttons, and success states.
+- **Tertiary (Golden Yellow):** Used for high-value rewards, currency, stars, and winner states.
+- **Neutral/Background:** The deep navy (#0f172a) acts as the canvas, ensuring all neon colors meet high accessibility standards for contrast.
+- **Glass Surfaces:** Use semi-transparent navy layers with a blur effect to create depth without losing the vibrant background energy.
 
 ## Typography
+The typography uses a duo of modern, friendly fonts. **Rubik** provides the "Bold Carnival" feel for headlines with its rounded corners and heavy weights, while **Plus Jakarta Sans** ensures UI elements and descriptions remain highly legible and modern.
 
-Typography functions as a "Playbill Hierarchy." 
-
-- **Headlines:** Use **Playfair Display**. Its high-contrast serifs and elegant curves mimic vintage woodblock printing. Use Bold or Black weights for display text to command attention.
-- **Body Text:** Use **Work Sans**. Its clean, professional, and slightly wider proportions ensure legibility against textured backgrounds.
-- **Data & Labels:** Use **Space Mono**. The monospaced nature evokes the feel of a printed ticket or a mechanical score counter, reinforcing the arcade theme.
-
-All caps should be used for labels and "Ticker-tape" announcements to enhance the circus aesthetic.
+Display text should often utilize a "Neon Glow" text shadow (e.g., `0 0 10px rgba(255, 0, 122, 0.5)`) when rendered in Electric Pink or Cyan to reinforce the festive theme.
 
 ## Layout & Spacing
+The layout follows a **Fluid Grid** system to accommodate the fast-paced, responsive nature of web gaming. 
 
-The layout is a **Fixed, Centered Grid** that feels like a framed stage. 
+- **Desktop:** 12-column grid, 24px gutters, 64px side margins.
+- **Mobile:** 4-column grid, 16px gutters, 20px side margins.
 
-- **Grid:** Use a 12-column grid for desktop with generous 64px margins to create a "contained" feel. 
-- **Vertical Rhythm:** A strict 8px baseline grid maintains order within the decorative chaos.
-- **Stripes:** Incorporate a "Pavilion Stripe" pattern (alternating Deep Crimson and Obsidian) in the margins or as section dividers.
-- **Frames:** Content should often be encased in "Theatrical Enclosures"—containers with defined Antique Gold borders rather than edge-to-edge fluid layouts.
+Content is organized into "Attraction Zones" (sections). Spacing is generous to allow for decorative glowing elements and to prevent the UI from feeling cramped. Use `md` (24px) for internal card padding and `xl` (64px) to separate major sections.
 
 ## Elevation & Depth
+Depth is achieved through a combination of **Glassmorphism** and **Outer Glows**. 
 
-Depth in this design system is created through **Materiality and Light**, not just shadows.
+1.  **Level 0 (Base):** Deep Navy background.
+2.  **Level 1 (Sectioning):** Subtle semi-transparent overlays (5% white opacity) to define large content areas.
+3.  **Level 2 (Cards):** Backdrop blur (12px) with a semi-transparent navy fill (70% opacity) and a 1px "Light Leak" border (top-left white highlight).
+4.  **Level 3 (Interactive/Floating):** Significant outer glows using the primary/secondary color hexes to suggest these items are "Powered On."
 
-- **Textured Layers:** Use a subtle grain or canvas overlay (3-5% opacity) on all surfaces to eliminate "digital flatness."
-- **Inward Glows:** Instead of drop shadows, use subtle inner glows (Antique Gold) on containers to make them look like recessed cabinets or light boxes.
-- **Vignetting:** Apply a soft radial gradient to the main background, darkening the corners to draw the eye to the center "Stage."
-- **Raised Accents:** Interactive elements (Buttons/Chips) use a "Skeuomorphic Press"—a slight 1px highlight on the top edge and a 2px dark "carved" shadow on the bottom.
+Shadows are never black; they are deep navy with high spread and low opacity to maintain the luminous feel.
 
 ## Shapes
+The shape language is consistently **Rounded**. Sharp corners are avoided to maintain a playful, safe, and friendly atmosphere. 
 
-The shape language is **Structured and Architectural**. 
-
-- **Corners:** Use "Soft" (0.25rem) corners for most elements to mimic the slight wear of old wood and metal. Avoid hyper-modern pill shapes except for very specific arcade-style buttons.
-- **Flourishes:** Incorporate "Inverted Scallops" (concave corners) on primary cards and modals to reference classic circus ticket shapes.
-- **Borders:** All primary containers should feature a 2px "Double-Stripe" border using Antique Gold.
+- Standard components (Buttons, Inputs): 0.5rem (8px).
+- Large components (Cards, Modals): 1rem (16px).
+- Badges and Score Indicators: Pill-shaped (Full radius).
 
 ## Components
 
-- **Buttons:** Primary buttons are "Theatrical Toggles." They feature a Deep Crimson base with an Antique Gold 2px border. On hover, they glow with the Vibrant Pink accent. Use all-caps Space Mono for the label.
-- **Chips:** Styled as "Admission Tokens." Circular or heavy-rounded rectangles with a thin gold border and weathered background.
-- **Cards:** "Showcase Cabinets." These must have a distinct header area separated by a gold filigree line. Use the vertical stripe pattern for the card's background at 10% opacity.
-- **Input Fields:** Styled as "Engraved Slots." A dark, inset appearance with the Aged Cream text appearing to be "lit" from within.
-- **Checkboxes/Radios:** Use a "Star-burst" motif. When selected, the center glows with a Vibrant Pink star.
-- **Progress Bars:** Mimic "Strength Testers" or vintage thermometers, filling with a gradient from Crimson to Vibrant Pink.
-- **Dividers:** Never use a plain line. Use a "Marquee String"—a line of small gold diamonds or stars.
+### Buttons & Interaction
+- **Primary Button:** Electric Pink gradient background with a subtle "gloss" overlay (linear-gradient top-to-center). On hover, increase the outer glow.
+- **Secondary Button:** Ghost style with a Cyan 2px border. On hover, fills with a translucent Cyan.
+- **Gloss Effect:** A thin, high-positioned white semi-transparent ellipse at the top of buttons to simulate a physical plastic/glass dome.
+
+### Game Cards
+- Featured game cards use a 1px glowing border that cycles through colors or pulses.
+- Backgrounds use the backdrop-blur glass effect to allow the background colors to peek through.
+
+### Score Badges & Timers
+- **Timers:** Cyan text with a "digital" font-weight, encased in a pill-shaped container with a subtle inner shadow to look recessed.
+- **Score Badges:** Golden Yellow with a star icon. Always uses high-contrast dark text for legibility.
+
+### Player Profile Header
+- Circular avatar with a "level-ring" border (Cyan or Pink depending on rank).
+- Background uses a horizontal glass bar that stretches across the top of the screen with a subtle bottom-border glow.
+
+### Input Fields
+- Dark navy fill with a 1px Cyan border that glows more intensely when focused. Text is always white or light cyan.
