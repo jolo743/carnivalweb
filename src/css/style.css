@@ -82,7 +82,7 @@
 
   --text-display-sm-size: 32px;
   --text-display-sm-weight: 800;
-  --text-display-sm-line-height: 1.2;
+  --text-display-sm-line-height: 4;
   --text-display-sm-letter-spacing: -0.01em;
 
   --text-headline-lg-size: 24px;
@@ -125,6 +125,7 @@
   --space-md: 24px;
   --space-lg: 40px;
   --space-xl: 64px;
+  --margin-hero: 20px;
 
   --container-max: 1280px;
   --container-gutter: 20px;
@@ -148,7 +149,6 @@
                0 0 24px rgba(253, 188, 0, 0.35);
 
   --neon-text-glow-pink: 0 0 10px rgba(255, 75, 137, 0.5);
-  --neon-text-glow-cyan: 0 0 10px rgba(0, 238, 252, 0.5);
 
   /* ---------- Buttons ---------- */
   --btn-primary-gradient: linear-gradient(
@@ -165,7 +165,7 @@
   );
 
   /* ---------- Layout ---------- */
-  --desktop-columns: 12;
+  --desktop-columns: 8;
   --mobile-columns: 4;
   --desktop-gutter: 24px;
   --mobile-gutter: 16px;
@@ -262,7 +262,6 @@ button {
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  text-shadow: var(--neon-text-glow-pink);
 }
 
 .nav-links {
@@ -310,6 +309,7 @@ button {
   text-align: center;
   min-height: 60vh;
   margin: var(--space-xl) auto;
+  margin-bottom: 0;
   max-width: 960px;
   padding: var(--space-xl) var(--space-md);
   background-color: var(--glass-bg);
@@ -346,7 +346,6 @@ button {
   letter-spacing: var(--text-display-lg-letter-spacing);
   color: var(--color-primary);
   text-transform: uppercase;
-  text-shadow: var(--neon-text-glow-pink);
   margin-bottom: var(--space-md);
 }
 
@@ -375,7 +374,6 @@ button {
   letter-spacing: var(--text-display-sm-letter-spacing);
   color: var(--color-secondary);
   text-transform: uppercase;
-  text-shadow: var(--neon-text-glow-cyan);
 }
 
 /* ==================================================
@@ -438,7 +436,7 @@ button {
   font-size: var(--text-headline-lg-size);
   font-weight: var(--text-headline-lg-weight);
   line-height: var(--text-headline-lg-line-height);
-  color: var(--color-tertiary);
+  color: var(--color-primary);
 }
 
 .game-card-body {
@@ -496,7 +494,6 @@ button {
   color: var(--color-on-primary);
   background-image: var(--btn-primary-gradient);
   border: 1px solid var(--color-primary);
-  box-shadow: var(--glow-pink);
 }
 
 .btn--primary::before {

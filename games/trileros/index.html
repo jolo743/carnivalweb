@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trileros</title>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="../../index.html" class="nav-logo">Carnival Arcade</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#parejas" class="nav-link">parejas</a></li>
+                <li><a href="../../index.html#ppt" class="nav-link">piedra papel tijera</a></li>
+                <li><a href="../../index.html#ruleta" class="nav-link">ruleta de la suerte</a></li>
+                <li><a href="../../index.html#juegos" class="nav-link">trileros</a></li>
+                <li><a href="../../index.html#nosotros" class="nav-link">nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="game-area">
+
+
+
+    <section class="status">
+
+        <h1 id="status-text">
+            CHOOSE YOUR CUP
+        </h1>
+
+
+    </section>
+
+
+
+
+
+    <section class="table" id="game-table">
+
+
+
+        <div id="ball"></div>
+
+
+
+        <div class="cup" id="cup-0" onclick="selectCup(0)">
+
+            <div class="cup-inner"></div>
+
+        </div>
+
+
+
+
+        <div class="cup" id="cup-1" onclick="selectCup(1)">
+
+            <div class="cup-inner"></div>
+
+        </div>
+
+
+
+
+        <div class="cup" id="cup-2" onclick="selectCup(2)">
+
+            <div class="cup-inner"></div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <div class="controls">
+
+
+    
+
+
+        <button id="shuffle-btn" onclick="startShuffle()">
+
+            SHUFFLE & PLAY
+
+        </button>
+
+
+
+        
+
+    </div>
+
+
+
+    <p class="info">
+        💡 Click any cup after shuffling to reveal the hidden ball
+    </p>
+
+
+
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
