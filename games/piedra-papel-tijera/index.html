@@ -4,67 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra, Papel o Tijeras</title>
+    <title>Piedra, Papel o Tijeras — Carnival Arcade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rubik:wght@700;800;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="../../index.html" class="nav-logo">Carnival Arcade</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#inicio" class="nav-link">inicio</a></li>
+                <li><a href="../../index.html#ppt" class="nav-link">piedra papel tijera</a></li>
+                <li><a href="../../index.html#juegos" class="nav-link">juegos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>¡Piedra, Papel o Tijeras!</h1>
+    <main class="site-main">
+        <h1>¡Piedra, Papel o Tijeras!</h1>
 
-    <!-- Sección del marcador -->
-    <div class="marcador">
-        <div class="marcador-item">
-            <span class="marcador-label">Jugador</span>
-            <span id="puntos-usuario" class="marcador-puntos">0</span>
-        </div>
-        <div class="marcador-separator">vs</div>
-        <div class="marcador-item">
-            <span class="marcador-label">Computadora</span>
-            <span id="puntos-computadora" class="marcador-puntos">0</span>
-        </div>
-    </div>
-
-    <!-- Zona de elecciones visuales -->
-    <div class="zona-elecciones">
-        <div class="eleccion-container">
-            <div class="eleccion-label">Tú elegiste</div>
-            <div id="eleccion-usuario" class="eleccion-display">
-                <span class="eleccion-placeholder">?</span>
+        <!-- Sección del marcador -->
+        <div class="marcador">
+            <div class="marcador-item">
+                <span class="marcador-label">Jugador</span>
+                <span id="puntos-usuario" class="marcador-puntos">0</span>
+            </div>
+            <div class="marcador-separator">vs</div>
+            <div class="marcador-item">
+                <span class="marcador-label">Computadora</span>
+                <span id="puntos-computadora" class="marcador-puntos">0</span>
             </div>
         </div>
 
-        <div class="vs-badge">VS</div>
+        <!-- Zona de elecciones visuales -->
+        <div class="zona-elecciones">
+            <div class="eleccion-container">
+                <div class="eleccion-label">Tú elegiste</div>
+                <div id="eleccion-usuario" class="eleccion-display">
+                    <span class="eleccion-placeholder">?</span>
+                </div>
+            </div>
 
-        <div class="eleccion-container">
-            <div class="eleccion-label">Computadora eligió</div>
-            <div id="eleccion-computadora" class="eleccion-display">
-                <span class="eleccion-placeholder">?</span>
+            <div class="vs-badge">VS</div>
+
+            <div class="eleccion-container">
+                <div class="eleccion-label">Computadora eligió</div>
+                <div id="eleccion-computadora" class="eleccion-display">
+                    <span class="eleccion-placeholder">?</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Botones de juego -->
-    <div class="botones">
-        <button id="btn-piedra" class="btn-juego">
-            <span class="btn-icon">🪨</span>
-            <span class="btn-text">Piedra</span>
-        </button>
-        <button id="btn-papel" class="btn-juego">
-            <span class="btn-icon">📄</span>
-            <span class="btn-text">Papel</span>
-        </button>
-        <button id="btn-tijeras" class="btn-juego">
-            <span class="btn-icon">✂️</span>
-            <span class="btn-text">Tijeras</span>
-        </button>
-    </div>
+        <!-- Botones de juego -->
+        <div class="botones">
+            <button id="btn-piedra" class="btn-juego">
+                <span class="btn-icon">🪨</span>
+                <span class="btn-text">Piedra</span>
+            </button>
+            <button id="btn-papel" class="btn-juego">
+                <span class="btn-icon">📄</span>
+                <span class="btn-text">Papel</span>
+            </button>
+            <button id="btn-tijeras" class="btn-juego">
+                <span class="btn-icon">✂️</span>
+                <span class="btn-text">Tijeras</span>
+            </button>
+        </div>
 
-    <!-- Resultado -->
-    <div id="resultado" class="resultado">Elige una opción para empezar.</div>
+        <!-- Resultado -->
+        <div id="resultado" class="resultado">Elige una opción para empezar.</div>
 
-    <!-- Botón de reinicio -->
-    <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar Marcador</button>
+        <!-- Botón de reinicio -->
+        <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar Marcador</button>
+    </main>
+
+    <footer class="site-footer">
+        <h3 class="footer-logo">CarnivalWeb</h3>
+    </footer>
 
     <script src="script.js"></script>
 </body>
