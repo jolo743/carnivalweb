@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Random Lucky — Ruleta de la Suerte Online</title>
-    <meta name="description" content="Gira la ruleta de la suerte y descubre un mensaje positivo personalizado con tu nombre. Juego gratuito y divertido.">
+    <meta name="description"
+        content="Gira la ruleta de la suerte y descubre un mensaje positivo personalizado con tu nombre. Juego gratuito y divertido.">
     <meta name="theme-color" content="#764ba2">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="../../index.html" class="nav-logo">Carnival Arcade</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#parejas" class="nav-link">parejas</a></li>
+                <li><a href="../../index.html#ppt" class="nav-link">piedra papel tijera</a></li>
+                <li><a href="../../index.html#ruleta" class="nav-link">ruleta de la suerte</a></li>
+                <li><a href="../../index.html#juegos" class="nav-link">trileros</a></li>
+                <li><a href="../../index.html#nosotros" class="nav-link">nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <a class="skip-link" href="#spinButton">Saltar a la ruleta</a>
 
     <!-- Lienzo de confeti: decorativo, se ignora en lectores de pantalla -->
     <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
     <main class="container" id="main">
-        <header class="app-header">
-            <h1>🎰 Random Lucky</h1>
+
+        <div class="app-header">
+            <h1>🎰 Ruleta de la suerte</h1>
             <p class="subtitle">Gira la ruleta y descubre tu mensaje de la suerte</p>
-        </header>
+        </div>
 
         <!-- Formulario para introducir el nombre antes de girar -->
         <form class="input-group" id="nameForm" novalidate>
             <label for="nameInput">Tu nombre</label>
-            <input
-                type="text"
-                id="nameInput"
-                name="name"
-                placeholder="Escribe tu nombre aquí..."
-                maxlength="20"
-                autocomplete="given-name"
-                aria-required="true"
-                aria-describedby="errorMessage"
-            >
+            <input type="text" id="nameInput" name="name" placeholder="Escribe tu nombre aquí..." maxlength="20"
+                autocomplete="given-name" aria-required="true" aria-describedby="errorMessage">
             <p class="error-message" id="errorMessage" role="alert"></p>
         </form>
 
@@ -44,23 +53,12 @@
 
             <figure class="wheel-container" aria-label="Ruleta de la suerte con 8 secciones de colores">
                 <div class="pointer" aria-hidden="true"></div>
-                <img
-                    id="wheelImage"
-                    src="../../src/images/ruleta-definitiva.png"
-                    alt="Ruleta giratoria con 8 secciones de colores vibrantes"
-                    width="400"
-                    height="400"
-                >
+                <img id="wheelImage" src="../../src/images/ruleta-definitiva.png"
+                    alt="Ruleta giratoria con 8 secciones de colores vibrantes" width="400" height="400">
             </figure>
 
             <!-- Botón principal: gira la ruleta -->
-            <button
-                type="submit"
-                form="nameForm"
-                class="spin-button"
-                id="spinButton"
-                aria-describedby="counterStatus"
-            >
+            <button type="submit" form="nameForm" class="spin-button" id="spinButton" aria-describedby="counterStatus">
                 🎲 Girar la ruleta
             </button>
 
@@ -82,14 +80,8 @@
     </main>
 
     <!-- Modal con el resultado: se muestra al terminar el giro -->
-    <div
-        class="result-overlay"
-        id="resultContainer"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="resultEyebrow"
-        aria-hidden="true"
-    >
+    <div class="result-overlay" id="resultContainer" role="dialog" aria-modal="true" aria-labelledby="resultEyebrow"
+        aria-hidden="true">
         <article class="result-card">
             <button type="button" class="result-close" id="resultClose" aria-label="Cerrar mensaje">&times;</button>
             <div class="result-icon" aria-hidden="true">✨</div>
@@ -99,9 +91,11 @@
     </div>
 
     <noscript>
-        <p class="noscript-warning">Para jugar a la Ruleta de la Suerte necesitas activar JavaScript en tu navegador.</p>
+        <p class="noscript-warning">Para jugar a la Ruleta de la Suerte necesitas activar JavaScript en tu navegador.
+        </p>
     </noscript>
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
