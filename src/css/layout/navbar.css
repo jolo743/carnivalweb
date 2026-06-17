@@ -3,72 +3,84 @@
 ================================ */
 
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background: #0b1326;
-    border-bottom: 2px solid var(--color-secondary-container);
-    box-shadow: var(--glow-cyan);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #0b1326;
+  border-bottom: 2px solid var(--color-secondary-container);
+  box-shadow: var(--glow-cyan);
 }
 
 .site-nav {
-    width: 100%;
-    padding: 18px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#parejas,
+#ppt,
+#ruleta,
+#trileros,
+#nosotros {
+  scroll-margin-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* LOGO */
 
 .nav-logo {
-    font-family: "Rubik", sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--color-primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    text-shadow: var(--glow-pink);
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: var(--glow-pink);
 }
 
 /* LINKS */
 
 .nav-links {
-    display: flex;
-    gap: 45px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-    color: var(--color-on-surface);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: .3s;
+  color: var(--color-on-surface);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: var(--color-secondary);
-    text-shadow: var(--glow-cyan);
+  color: var(--color-secondary);
+  text-shadow: var(--glow-cyan);
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
-    .site-nav {
-        flex-direction: column;
-        gap: var(--space-sm);
-        padding: var(--space-sm) var(--container-gutter);
-    }
+  .site-nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--container-gutter);
+  }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: var(--space-xs);
-    }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
 }
