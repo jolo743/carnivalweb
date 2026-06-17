@@ -22,12 +22,31 @@
             </ul>
         </nav>
     </header>
-    <h1>Parejas</h1>
-    <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar</button>
+
+    <main>
+        <h1>Parejas</h1>
+
+        <!-- Sección de intentos -->
+        <div class="marcador">
+            <div class="marcador-item">
+                <span class="marcador-label">intentos</span>
+                <span id="puntos-usuario" class="marcador-puntos">0</span>
+            </div>
+        </div>
+
+        <!-- Tablero de cartas -->
+        <div id="tablero" class="tablero" aria-label="Tablero de cartas"></div>
+
+        <!-- Bloque de resultado -->
+        <div id="resultado" class="resultado" role="status" aria-live="polite">Encuentra las 8 parejas.</div>
+
+        <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar</button>
+    </main>
 
     <footer class="site-footer">
         <h3 class="footer-logo">CarnivalWeb</h3>
     </footer>
+
     <script src="../src/js/games/parejas.js"></script>
 </body>
 </html>

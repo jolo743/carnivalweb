@@ -1,6 +1,262 @@
-body {
-    min-height: 100vh;
-    background: var(--color-background);
-    color: var(--color-on-surface);
-    overflow-x: hidden;
+main {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--container-gutter);
+  text-align: center;
+}
+
+/* ==================================================
+   HERO TITLE DEL JUEGO
+   ================================================== */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-display-lg-size);
+  font-weight: var(--text-display-lg-weight);
+  line-height: var(--text-display-lg-line-height);
+  letter-spacing: var(--text-display-lg-letter-spacing);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  text-shadow: var(--neon-text-glow-pink);
+  margin-bottom: var(--space-lg);
+}
+
+/* ==================================================
+   MARCADOR intentos
+   ================================================== */
+.marcador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  margin: 0 auto var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  max-width: 720px;
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.marcador::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, var(--glass-highlight), transparent);
+  pointer-events: none;
+}
+
+.marcador-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.marcador-label {
+  font-family: var(--font-body);
+  font-size: var(--text-label-sm-size);
+  font-weight: var(--text-label-sm-weight);
+  letter-spacing: var(--text-label-lg-letter-spacing);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+.marcador-puntos {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: var(--text-display-sm-weight);
+  line-height: 1;
+  color: var(--color-tertiary);
+  text-shadow: var(--neon-text-glow-pink);
+}
+
+.marcador-separator {
+  font-family: var(--font-display);
+  font-size: var(--text-headline-lg-size);
+  font-weight: var(--text-headline-lg-weight);
+  color: var(--color-primary);
+  text-shadow: var(--neon-text-glow-pink);
+}
+
+/* ==================================================
+   TABLERO — grid + perspective para 3D
+   ================================================== */
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  max-width: 720px;
+  margin: 0 auto var(--space-lg);
+  padding: var(--space-md);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.tablero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, var(--glass-highlight), transparent);
+  pointer-events: none;
+}
+
+/* ==================================================
+   CARTA — flip 3D
+   ================================================== */
+.carta {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.carta:hover:not(.flipped):not(.matched) {
+  transform: scale(1.04);
+  border-color: var(--color-secondary);
+  box-shadow: var(--glow-cyan), var(--shadow-soft);
+}
+
+.carta-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.carta.flipped .carta-inner,
+.carta.matched .carta-inner {
+  transform: rotateY(180deg);
+}
+
+.carta-back,
+.carta-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10%;
+  border-radius: var(--radius-md);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.carta-back {
+  background-color: var(--color-surface-container-lowest);
+}
+
+.carta-face {
+  transform: rotateY(180deg);
+  background-color: var(--color-surface-container-low);
+}
+
+.carta.matched {
+  border-color: var(--color-tertiary);
+  box-shadow: var(--glow-gold), var(--shadow-soft);
+  cursor: default;
+}
+
+/* ==================================================
+   RESULTADO — debajo del tablero
+   ================================================== */
+.resultado {
+  max-width: 720px;
+  margin: 0 auto var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg-size);
+  font-weight: var(--text-label-lg-weight);
+  letter-spacing: var(--text-label-lg-letter-spacing);
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-shadow: var(--neon-text-glow-pink);
+}
+
+/* ==================================================
+   BOTÓN DE REINICIO
+   ================================================== */
+.btn-reinicio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-label-lg-size);
+  font-weight: var(--text-label-lg-weight);
+  letter-spacing: var(--text-label-lg-letter-spacing);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 2px solid var(--color-secondary-container);
+  border-radius: var(--radius-default);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+.btn-reinicio:hover {
+  background-color: rgba(0, 238, 252, 0.12);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-1px);
+}
+
+.btn-reinicio:active {
+  transform: translateY(0);
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+@media (max-width: 600px) {
+  .tablero {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+  }
+
+  .marcador {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .marcador-puntos {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .tablero {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
