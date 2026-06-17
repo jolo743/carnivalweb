@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trileros</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/pages/trileros.css">
+    <link rel="stylesheet" href="../src/css/layout/navbar.css">
+    <link rel="stylesheet" href="../src/css/layout/footer.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="../../index.html" class="nav-logo">Carnival Arcade</a>
+            <ul class="nav-links">
+                <li><a href="../html/parejas.html" class="nav-link">parejas</a></li>
+                <li><a href="../html/ppt.html" class="nav-link">piedra papel tijera</a></li>
+                <li><a href="../html/random-lucky.html" class="nav-link">ruleta de la suerte</a></li>
+                <li><a href="../html/trileros.html" class="nav-link">trileros</a></li>
+                <li><a href="../../index.html#nosotros" class="nav-link">nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="game-area">
+
+
+
+    <section class="status">
+        <h1 id="status-text">
+            ELIGE TU VASO
+        </h1>
+    </section>
+
+    <section class="table" id="game-table">
+
+        <div id="ball"></div>
+
+        <div class="cup" id="cup-0" onclick="selectCup(0)">
+
+            <div class="cup-inner"></div>
+
+        </div>
+
+        <div class="cup" id="cup-1" onclick="selectCup(1)">
+
+            <div class="cup-inner"></div>
+
+        </div>
+
+        <div class="cup" id="cup-2" onclick="selectCup(2)">
+            <div class="cup-inner"></div>
+        </div>
+    </section>
+
+    <div class="controls">
+        <button id="shuffle-btn" onclick="startShuffle()">
+            MEZCLAR Y JUGAR
+        </button>
+    </div>
+
+    <p class="info">
+        💡 Haz clic en cualquier vaso después de mezclar para revelar la pelota oculta
+    </p>
+</main>
+
+<footer class="site-footer">
+    <h3 class="footer-logo">CarnivalWeb</h3>
+</footer>
+
+<script src="../src/js/games/trileros.js"></script>
+</body>
+</html>

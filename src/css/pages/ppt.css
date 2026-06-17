@@ -31,9 +31,9 @@
   --color-secondary: #d3fbff;
   --color-secondary-container: #00eefc;
 
-  /* ---------- Tertiary (Golden Yellow) ---------- */
-  --color-tertiary: #fdbc00;
-  --color-tertiary-container: #b98900;
+  /* ---------- Tertiary (Blue) ---------- */
+  --color-tertiary: #00d7fd;
+  --color-tertiary-container: #00a6b9;
 
   /* ---------- Background ---------- */
   --color-background: #0b1326;
@@ -108,23 +108,17 @@
   --shadow-card: 0 12px 40px rgba(6, 14, 32, 0.45);
 
   /* ---------- Neon glows ---------- */
-  --glow-pink: 0 0 12px rgba(255, 75, 137, 0.6),
-               0 0 24px rgba(255, 75, 137, 0.35);
-  --glow-cyan: 0 0 12px rgba(0, 238, 252, 0.6),
-               0 0 24px rgba(0, 238, 252, 0.35);
-  --glow-gold: 0 0 12px rgba(253, 188, 0, 0.6),
-               0 0 24px rgba(253, 188, 0, 0.35);
 
   --neon-text-glow-pink: 0 0 10px rgba(255, 75, 137, 0.5);
   --neon-text-glow-cyan: 0 0 10px rgba(0, 238, 252, 0.5);
-  --neon-text-glow-gold: 0 0 10px rgba(253, 188, 0, 0.5);
+
 
   /* ---------- Buttons ---------- */
   --btn-primary-gradient: linear-gradient(
     135deg,
-    #ffb1c3 0%,
-    #ff4b89 50%,
-    #bb0058 100%
+    #b1efff 0%,
+    #4bd5ff 50%,
+    #009fbb 100%
   );
   --btn-gloss: linear-gradient(
     to bottom,
@@ -132,6 +126,13 @@
     rgba(255, 255, 255, 0.12) 30%,
     transparent 60%
   );
+
+  /* Navbar colors (matching random-lucky) */
+  --pink-light: #ffb1c3;
+  --cyan: #00eefc;
+  --text: #dae2fd;
+  --glow-pink: 0 0 12px rgba(255, 75, 137, .6), 0 0 24px rgba(255, 75, 137, .35);
+  --glow-cyan: 0 0 12px rgba(0, 238, 252, .6);
 }
 
 /* ==================================================
@@ -184,65 +185,6 @@ button {
   background: none;
   cursor: pointer;
   color: inherit;
-}
-
-/* ==================================================
-   HEADER & NAVIGATION (mismo que la landing)
-   ================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-bottom: 1px solid var(--glass-highlight);
-  box-shadow: var(--glow-cyan);
-}
-
-.site-nav {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--space-sm) var(--container-gutter);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: var(--text-headline-lg-size);
-  font-weight: var(--text-headline-lg-weight);
-  line-height: var(--text-headline-lg-line-height);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-shadow: var(--neon-text-glow-pink);
-}
-
-.nav-links {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.nav-link {
-  font-family: var(--font-body);
-  font-size: var(--text-label-sm-size);
-  font-weight: var(--text-label-sm-weight);
-  line-height: var(--text-label-sm-line-height);
-  letter-spacing: var(--text-label-lg-letter-spacing);
-  color: var(--color-on-surface);
-  text-transform: uppercase;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-default);
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--color-secondary);
-  background-color: rgba(0, 238, 252, 0.08);
-  box-shadow: var(--glow-cyan);
 }
 
 /* ==================================================
@@ -323,7 +265,7 @@ h1 {
   font-weight: var(--text-display-sm-weight);
   line-height: 1;
   color: var(--color-tertiary);
-  text-shadow: var(--neon-text-glow-gold);
+  text-shadow: var(--neon-text-glow-cyan);
 }
 
 .marcador-separator {
@@ -391,8 +333,8 @@ h1 {
 }
 
 .eleccion-display.active {
-  border-color: var(--color-tertiary);
-  box-shadow: var(--glow-gold);
+  border-color: var(--color-primary);
+  box-shadow: var(--neon-text-glow-pink);
 }
 
 .eleccion-placeholder {
@@ -458,11 +400,6 @@ h1 {
   border-radius: var(--radius-default) var(--radius-default) 0 0;
 }
 
-.btn-juego:hover:not(:disabled) {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(255, 75, 137, 0.8),
-              0 0 36px rgba(255, 75, 137, 0.45);
-}
 
 .btn-juego:active:not(:disabled) {
   transform: translateY(0);
@@ -549,7 +486,7 @@ h1 {
 }
 
 /* ==================================================
-   FOOTER (mismo que la landing)
+   FOOTER
    ================================================== */
 .site-footer {
   margin-top: var(--space-xl);
@@ -575,18 +512,6 @@ h1 {
    MOBILE
    ================================================== */
 @media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--container-gutter);
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-xs);
-  }
-
   h1 {
     font-size: var(--text-headline-lg-mobile-size);
     line-height: var(--text-headline-lg-mobile-line-height);

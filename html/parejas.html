@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parejas</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/pages/parejas.css">
+    <link rel="stylesheet" href="../src/css/layout/navbar.css">
+    <link rel="stylesheet" href="../src/css/layout/footer.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="../../index.html" class="nav-logo">Carnival Arcade</a>
+            <ul class="nav-links">
+                <li><a href="../html/parejas.html" class="nav-link">parejas</a></li>
+                <li><a href="../html/ppt.html" class="nav-link">piedra papel tijera</a></li>
+                <li><a href="../html/random-lucky.html" class="nav-link">ruleta de la suerte</a></li>
+                <li><a href="../html/trileros.html" class="nav-link">trileros</a></li>
+                <li><a href="../../index.html#nosotros" class="nav-link">nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Parejas</h1>
+
+        <!-- Sección de intentos -->
+        <div class="marcador">
+            <div class="marcador-item">
+                <span class="marcador-label">intentos</span>
+                <span id="puntos-usuario" class="marcador-puntos">0</span>
+            </div>
+        </div>
+
+        <!-- Tablero de cartas -->
+        <div id="tablero" class="tablero" aria-label="Tablero de cartas"></div>
+
+        <!-- Bloque de resultado -->
+        <div id="resultado" class="resultado" role="status" aria-live="polite">Encuentra las 8 parejas.</div>
+
+        <button id="btn-reinicio" class="btn-reinicio">🔄 Reiniciar</button>
+    </main>
+
+    <footer class="site-footer">
+        <h3 class="footer-logo">CarnivalWeb</h3>
+    </footer>
+
+    <script src="../src/js/games/parejas.js"></script>
+</body>
+</html>

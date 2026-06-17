@@ -82,7 +82,7 @@
 
   --text-display-sm-size: 32px;
   --text-display-sm-weight: 800;
-  --text-display-sm-line-height: 1.2;
+  --text-display-sm-line-height: 4;
   --text-display-sm-letter-spacing: -0.01em;
 
   --text-headline-lg-size: 24px;
@@ -125,6 +125,7 @@
   --space-md: 24px;
   --space-lg: 40px;
   --space-xl: 64px;
+  --margin-hero: 20px;
 
   --container-max: 1280px;
   --container-gutter: 20px;
@@ -148,7 +149,6 @@
                0 0 24px rgba(253, 188, 0, 0.35);
 
   --neon-text-glow-pink: 0 0 10px rgba(255, 75, 137, 0.5);
-  --neon-text-glow-cyan: 0 0 10px rgba(0, 238, 252, 0.5);
 
   /* ---------- Buttons ---------- */
   --btn-primary-gradient: linear-gradient(
@@ -165,7 +165,7 @@
   );
 
   /* ---------- Layout ---------- */
-  --desktop-columns: 12;
+  --desktop-columns: 8;
   --mobile-columns: 4;
   --desktop-gutter: 24px;
   --mobile-gutter: 16px;
@@ -230,66 +230,6 @@ button {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION — "Player Profile Header"
-   Horizontal glass bar with subtle bottom-border glow.
-   ================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-bottom: 1px solid var(--glass-highlight);
-  box-shadow: var(--glow-cyan);
-}
-
-.site-nav {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--space-sm) var(--container-gutter);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: var(--text-headline-lg-size);
-  font-weight: var(--text-headline-lg-weight);
-  line-height: var(--text-headline-lg-line-height);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-shadow: var(--neon-text-glow-pink);
-}
-
-.nav-links {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.nav-link {
-  font-family: var(--font-body);
-  font-size: var(--text-label-sm-size);
-  font-weight: var(--text-label-sm-weight);
-  line-height: var(--text-label-sm-line-height);
-  letter-spacing: var(--text-label-lg-letter-spacing);
-  color: var(--color-on-surface);
-  text-transform: uppercase;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-default);
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--color-secondary);
-  background-color: rgba(0, 238, 252, 0.08);
-  box-shadow: var(--glow-cyan);
-}
-
-/* ==================================================
    MAIN CONTENT — Fluid Grid container
    ================================================== */
 .site-main {
@@ -310,6 +250,7 @@ button {
   text-align: center;
   min-height: 60vh;
   margin: var(--space-xl) auto;
+  margin-bottom: 0;
   max-width: 960px;
   padding: var(--space-xl) var(--space-md);
   background-color: var(--glass-bg);
@@ -346,7 +287,6 @@ button {
   letter-spacing: var(--text-display-lg-letter-spacing);
   color: var(--color-primary);
   text-transform: uppercase;
-  text-shadow: var(--neon-text-glow-pink);
   margin-bottom: var(--space-md);
 }
 
@@ -375,7 +315,6 @@ button {
   letter-spacing: var(--text-display-sm-letter-spacing);
   color: var(--color-secondary);
   text-transform: uppercase;
-  text-shadow: var(--neon-text-glow-cyan);
 }
 
 /* ==================================================
@@ -438,7 +377,7 @@ button {
   font-size: var(--text-headline-lg-size);
   font-weight: var(--text-headline-lg-weight);
   line-height: var(--text-headline-lg-line-height);
-  color: var(--color-tertiary);
+  color: var(--color-primary);
 }
 
 .game-card-body {
@@ -496,7 +435,6 @@ button {
   color: var(--color-on-primary);
   background-image: var(--btn-primary-gradient);
   border: 1px solid var(--color-primary);
-  box-shadow: var(--glow-pink);
 }
 
 .btn--primary::before {
@@ -634,44 +572,9 @@ button {
 }
 
 /* ==================================================
-   FOOTER — "Curtain Call"
-   ================================================== */
-.site-footer {
-  margin-top: var(--space-xl);
-  padding: var(--space-md) 0;
-  text-align: center;
-  background-color: var(--color-surface-container-lowest);
-  border-top: 1px solid var(--glass-highlight);
-  box-shadow: 0 -8px 32px rgba(6, 14, 32, 0.35);
-}
-
-.footer-logo {
-  font-family: var(--font-display);
-  font-size: var(--text-headline-lg-size);
-  font-weight: var(--text-headline-lg-weight);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-shadow: var(--neon-text-glow-pink);
-  opacity: 0.85;
-}
-
-/* ==================================================
    MOBILE — 4-col grid, 16px gutter, 20px margin
    ================================================== */
 @media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--container-gutter);
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-xs);
-  }
-
   .site-main {
     padding: 0 var(--container-gutter);
   }
