@@ -41,7 +41,7 @@ function startShuffle(){
 
 
 
-    document.getElementById("status-text").innerText = "SHUFFLING...";
+    document.getElementById("status-text").innerText = "MEZCLANDO...";
 
     document.getElementById("shuffle-btn").disabled = true;
 
@@ -151,7 +151,7 @@ function finalizeShuffle(){
     isShuffling = false;
 
 
-    document.getElementById("status-text").innerText = "PICK A CUP!";
+    document.getElementById("status-text").innerText = "¡ELIGE UN VASO!";
 
 
     document.getElementById("shuffle-btn").disabled = false;
@@ -200,7 +200,7 @@ function selectCup(index){
             showBall(index);
 
 
-            document.getElementById("status-text").innerText = "WINNER! 🎉";
+            document.getElementById("status-text").innerText = "¡GANASTE! 🎉";
 
 
 
@@ -229,7 +229,7 @@ function selectCup(index){
         else{
 
 
-            document.getElementById("status-text").innerText = "EMPTY CUP";
+            document.getElementById("status-text").innerText = "VASO VACÍO";
 
 
 
