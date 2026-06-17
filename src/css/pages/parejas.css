@@ -1,3 +1,12 @@
+:root {
+  /* Navbar colors (matching random-lucky) */
+  --pink-light: #ffb1c3;
+  --cyan: #00eefc;
+  --text: #dae2fd;
+  --glow-pink: 0 0 12px rgba(255, 75, 137, .6), 0 0 24px rgba(255, 75, 137, .35);
+  --glow-cyan: 0 0 12px rgba(0, 238, 252, .6);
+}
+
 main {
   max-width: var(--container-max);
   margin: 0 auto;

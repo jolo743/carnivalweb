@@ -109,13 +109,9 @@
 
   /* ---------- Neon glows ---------- */
 
-  --glow-cyan: 0 0 12px rgba(0, 238, 252, 0.6),
-               0 0 24px rgba(0, 238, 252, 0.35);
- 
-
   --neon-text-glow-pink: 0 0 10px rgba(255, 75, 137, 0.5);
   --neon-text-glow-cyan: 0 0 10px rgba(0, 238, 252, 0.5);
- 
+
 
   /* ---------- Buttons ---------- */
   --btn-primary-gradient: linear-gradient(
@@ -130,6 +126,13 @@
     rgba(255, 255, 255, 0.12) 30%,
     transparent 60%
   );
+
+  /* Navbar colors (matching random-lucky) */
+  --pink-light: #ffb1c3;
+  --cyan: #00eefc;
+  --text: #dae2fd;
+  --glow-pink: 0 0 12px rgba(255, 75, 137, .6), 0 0 24px rgba(255, 75, 137, .35);
+  --glow-cyan: 0 0 12px rgba(0, 238, 252, .6);
 }
 
 /* ==================================================
@@ -509,18 +512,6 @@ h1 {
    MOBILE
    ================================================== */
 @media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--container-gutter);
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-xs);
-  }
-
   h1 {
     font-size: var(--text-headline-lg-mobile-size);
     line-height: var(--text-headline-lg-mobile-line-height);

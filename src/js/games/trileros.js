@@ -9,6 +9,24 @@ let hasSelected = false;
 let selectedCup = null;
 
 
+function getCupWidth(){
+
+    let cup = document.querySelector(".cup");
+
+    return cup ? cup.offsetWidth : 170;
+
+}
+
+
+function getCupHeight(){
+
+    let cup = document.querySelector(".cup");
+
+    return cup ? cup.offsetHeight : 210;
+
+}
+
+
 function startShuffle(){
 
 
@@ -101,11 +119,12 @@ function shuffleAnimation(){
     let cupB = document.getElementById(`cup-${b}`);
 
 
+    let moveX = getCupWidth() * 0.7;
 
 
-    cupA.style.transform = "translateX(120px)";
+    cupA.style.transform = `translateX(${moveX}px)`;
 
-    cupB.style.transform = "translateX(-120px)";
+    cupB.style.transform = `translateX(-${moveX}px)`;
 
 
 
@@ -183,9 +202,12 @@ function selectCup(index){
 
     let cup = document.querySelector(`#cup-${index} .cup-inner`);
 
+    let liftY = getCupHeight() * 0.7;
 
 
-    cup.style.transform = "translateY(-150px)";
+    cup.style.transform = `translateY(-${liftY}px)`;
+
+
 
 
 
@@ -303,8 +325,10 @@ function revealCorrect(){
 
     let correctCup = document.querySelector(`#cup-${ballPosition} .cup-inner`);
 
+    let liftY = getCupHeight() * 0.7;
 
-    correctCup.style.transform = "translateY(-150px)";
+
+    correctCup.style.transform = `translateY(-${liftY}px)`;
 
 
     showBall(ballPosition);
