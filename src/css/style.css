@@ -230,65 +230,6 @@ button {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION — "Player Profile Header"
-   Horizontal glass bar with subtle bottom-border glow.
-   ================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-bottom: 1px solid var(--glass-highlight);
-  box-shadow: var(--glow-cyan);
-}
-
-.site-nav {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--space-sm) var(--container-gutter);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: var(--text-headline-lg-size);
-  font-weight: var(--text-headline-lg-weight);
-  line-height: var(--text-headline-lg-line-height);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.nav-links {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.nav-link {
-  font-family: var(--font-body);
-  font-size: var(--text-label-sm-size);
-  font-weight: var(--text-label-sm-weight);
-  line-height: var(--text-label-sm-line-height);
-  letter-spacing: var(--text-label-lg-letter-spacing);
-  color: var(--color-on-surface);
-  text-transform: uppercase;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-default);
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--color-secondary);
-  background-color: rgba(0, 238, 252, 0.08);
-  box-shadow: var(--glow-cyan);
-}
-
-/* ==================================================
    MAIN CONTENT — Fluid Grid container
    ================================================== */
 .site-main {
@@ -657,18 +598,6 @@ button {
    MOBILE — 4-col grid, 16px gutter, 20px margin
    ================================================== */
 @media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--container-gutter);
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-xs);
-  }
-
   .site-main {
     padding: 0 var(--container-gutter);
   }
