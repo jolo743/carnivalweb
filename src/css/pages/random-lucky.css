@@ -553,13 +553,15 @@ input[type="text"]:focus {
 
     position: absolute;
 
-    top: -40px;
+    top: -100px;
 
     left: 0;
 
-    background: #ff4b89;
+    background: transparent;
 
-    color: white;
+    color: var(--cyan);
+
+    text-decoration: underline;
 
     padding: 10px 20px;
 
@@ -567,11 +569,23 @@ input[type="text"]:focus {
 
     z-index: 9999;
 
+    opacity: 0;
+
+    transition: opacity .2s, top .2s;
+
 }
 
 
-.skip-link:focus {
+.skip-link:focus,
+
+.skip-link:focus-visible {
 
     top: 0;
+
+    opacity: 1;
+
+    outline: 2px solid var(--cyan);
+
+    outline-offset: 2px;
 
 }
