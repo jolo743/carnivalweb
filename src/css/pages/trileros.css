@@ -33,9 +33,9 @@ overflow-x:hidden;
 /* GAME */
 .game-area{
 
-height:calc(100vh - 120px);
+min-height:calc(100vh - 120px);
 
-padding-top:60px;
+padding:60px 0;
 
 display:flex;
 
@@ -57,7 +57,7 @@ text-align:center;
 
 margin-top:30px;
 
-margin-bottom:80px;
+margin-bottom:20px;
 
 }
 
@@ -108,7 +108,7 @@ align-items:flex-end;
 
 position:relative;
 
-margin-top:80px;
+margin-top:30px;
 
 
 }
