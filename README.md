@@ -9,10 +9,10 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 | Nombre  | Juego asignado              | Rama de trabajo              |
 |---------|-----------------------------|------------------------------|
 | Claudia | Random Lucky                | `feature/random-lucky`       |
-| Boris   | Trileros                    | `feature/trileros`           |
+| Claudia | Trileros                    | `feature/trileros`           |
 | Jordi   | Parejas                     | `feature/parejas`            |
 | Jean    | Piedra, Papel o Tijeras     | `feature/piedra-papel-tijera`|
-| Todos   | Tiro al Blanco *(a definir)*| `feature/tiro-al-blanco`     |
+
 
 ---
 
@@ -21,10 +21,9 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 | Juego                  | Descripción                                                        |
 |------------------------|--------------------------------------------------------------------|
 | Random Lucky           | Asigna mensajes de suerte aleatorios a una lista de nombres        |
-| Trileros               | Adivina en qué vaso está escondida la bolita                       |
+| Piedra, papel o tijera | 3 rondas contra la máquina                                         |
 | Parejas                | Encuentra todas las parejas de cartas en el menor tiempo posible   |
-| Tiro al Blanco         | Apunta y derriba los blancos en movimiento antes de que acabe el tiempo |
-| Piedra, Papel o Tijeras *(extra)* | 3 rondas contra la máquina                             |
+| Trileros  *(extra)*    | Adivina en qué vaso está escondida la bolita                       |
 
 ---
 
@@ -44,44 +43,57 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 
 ```
 carnivalweb/
-├── index.html                        ← Landing page principal
+├── assets/
+│   ├── fonts/
+│   ├── images/
+│   │   ├── celebration.png
+│   │   ├── circus.png
+│   │   ├── controller.png
+│   │   ├── espalda.png
+│   │   ├── parejas.png
+│   │   ├── piedra-papel-tiejras.png
+│   │   ├── popcorn.png
+│   │   ├── rocket.png
+│   │   ├── ruleta-definitiva.png
+│   │   ├── ruleta.png
+│   │   ├── sharp-five.png
+│   │   ├── sparkle.png
+│   │   ├── ticket.png
+│   │   ├── tiro-al-blanco.png
+│   │   └── trileros.png
+│   └── sounds/
+├── docs/
+│   ├── BACKLOG_LINEAR.md
+│   ├── DESIGN.md
+│   ├── FLOWCHARTS.md
+│   ├── GITFLOW.md
+│   ├── PRODUCT_OWNER.md
+│   └── USER_STORIES.md
+├── html/
+│   ├── parejas.html
+│   ├── ppt.html
+│   ├── random-lucky.html
+│   └── trileros.html
 ├── src/
 │   ├── css/
-│   │   └── style.css                 ← Estilos globales y variables CSS
+│   │   ├── layout/
+│   │   │   ├── footer.css
+│   │   │   └── navbar.css
+│   │   ├── pages/
+│   │   │   ├── parejas.css
+│   │   │   ├── ppt.css
+│   │   │   ├── random-lucky.css
+│   │   │   └── trileros.css
+│   │   └── style.css
 │   └── js/
-│       └── script.js                 ← JS global (navegación, etc.)
-│
-├── games/
-│   ├── random-lucky/                 ← Claudia
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── trileros/                     ← Boris
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── parejas/                      ← Jordi
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── tiro-al-blanco/               ← por asignar
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   └── piedra-papel-tijera/          ← Jean (extra)
-│       ├── index.html
-│       ├── style.css
+│       ├── games/
+│       │   ├── parejas.js
+│       │   ├── ppt.js
+│       │   ├── random-lucky.js
+│       │   └── trileros.js
 │       └── script.js
-│
-├── assets/
-│   ├── images/                       ← Imágenes compartidas
-│   ├── sounds/                       ← Efectos de sonido globales
-│   └── fonts/                        ← Tipografías
-│
-└── docs/
-    ├── USER_STORIES.md               ← Historias de usuario + backlog
-    ├── GITFLOW.md                    ← Guía de ramas y commits
-    └── FLOWCHARTS.md                 ← Algoritmos de cada juego
+├── index.html
+└── README.md
 ```
 
 ---
@@ -113,7 +125,7 @@ start index.html  # Windows
 | Sprint | Fechas        | Objetivo                                      |
 |--------|---------------|-----------------------------------------------|
 | 1      | Días 1 – 4    | Estructura, HTML semántico, lógica base de cada juego |
-| 2      | Días 5 – 8    | CSS, animaciones, sonidos, responsive, pulido |
+| 2      | Días 5 – 8    | CSS, animaciones, responsive, pulido |
 
 ---
 
