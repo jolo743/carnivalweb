@@ -1,6 +1,5 @@
 /* ================================
    NAVBAR — shared across all pages
-   ================================ */
 
 .site-header {
   position: sticky;
@@ -8,7 +7,7 @@
   z-index: 1000;
   width: 100%;
   background: #0b1326;
-  border-bottom: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--color-secondary-container);
   box-shadow: var(--glow-cyan);
 }
 
@@ -38,11 +37,10 @@ html {
   font-family: "Rubik", sans-serif;
   font-size: 2rem;
   font-weight: 900;
-  color: var(--pink-light);
+  color: var(--color-primary);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-shadow: var(--glow-pink);
 }
 
 /* LINKS */
@@ -56,7 +54,7 @@ html {
 }
 
 .nav-link {
-  color: var(--text);
+  color: var(--color-on-surface);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 700;
@@ -65,7 +63,7 @@ html {
 }
 
 .nav-link:hover {
-  color: var(--cyan);
+  color: var(--color-secondary);
   text-shadow: var(--glow-cyan);
 }
 
@@ -74,13 +72,13 @@ html {
 @media (max-width: 768px) {
   .site-nav {
     flex-direction: column;
-    gap: 12px;
-    padding: 12px 20px;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--container-gutter);
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;
+    gap: var(--space-xs);
   }
 }

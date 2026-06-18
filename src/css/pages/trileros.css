@@ -1,27 +1,7 @@
-:root{
-
-
---background:#0b1326;
-
---surface:#171f33;
-
---pink:#ff4b89;
-
---pink-light:#ffb1c3;
-
---cyan:#00eefc;
-
---gold:#fdbc00;
-
---text:#dae2fd;
-
---glow-pink:0 0 12px rgba(255,75,137,.6),0 0 24px rgba(255,75,137,.35);
-
---glow-cyan:0 0 12px rgba(0,238,252,.6);
-
-
-}
-
+/* ==================================================
+   TRILEROS
+   Tokens en src/css/style.css
+   ================================================== */
 
 
 
@@ -33,7 +13,7 @@ padding:0;
 
 box-sizing:border-box;
 
-font-family:"Plus Jakarta Sans",sans-serif;
+font-family:var(--font-body);
 
 }
 
@@ -41,20 +21,21 @@ body{
 
 min-height:100vh;
 
-background:var(--background);
+background:var(--color-background);
 
-color:var(--text);
+color:var(--color-on-surface);
 
 overflow-x:hidden;
 
 }
 
+
 /* GAME */
 .game-area{
 
-min-height:calc(100vh - 80px);
+min-height:calc(100vh - 120px);
 
-padding-top:100px;
+padding:60px 0;
 
 display:flex;
 
@@ -80,19 +61,18 @@ margin-bottom:20px;
 
 }
 
-
 .status h1{
 
 
 font-size:48px;
 
 
-color:var(--cyan);
+color:var(--color-secondary-container);
 
 
 text-shadow:
 
-0 0 20px var(--cyan);
+0 0 20px var(--color-secondary-container);
 
 
 }
@@ -128,7 +108,7 @@ align-items:flex-end;
 
 position:relative;
 
-margin-top:20px;
+margin-top:30px;
 
 
 }
@@ -202,7 +182,7 @@ width:45px;
 height:45px;
 
 
-background:var(--gold);
+background:var(--color-tertiary);
 
 
 border-radius:50%;
@@ -210,7 +190,7 @@ border-radius:50%;
 
 box-shadow:
 
-0 0 30px var(--gold);
+0 0 30px var(--color-tertiary);
 
 
 opacity:0;
@@ -252,7 +232,7 @@ border-radius:20px;
 background:transparent;
 
 
-border:2px solid var(--pink);
+border:2px solid var(--color-primary);
 
 
 color:white;
@@ -272,9 +252,9 @@ cursor:pointer;
 #shuffle-btn{
 
 
-background:var(--pink);
+background:var(--color-primary);
 
-color:#66002c;
+color:var(--color-on-primary);
 
 
 box-shadow:
@@ -305,194 +285,5 @@ margin-top:25px;
 
 opacity:.7;
 
-
-}
-
-
-/* ================================
-   RESPONSIVE
-   ================================ */
-
-@media (max-width:960px){
-
-.table{
-
-width:100%;
-
-max-width:700px;
-
-height:auto;
-
-min-height:300px;
-
-padding:0 20px;
-
-}
-
-.cup{
-
-width:140px;
-
-height:180px;
-
-}
-
-}
-
-@media (max-width:768px){
-
-.game-area{
-
-padding-top:80px;
-
-}
-
-.status h1{
-
-font-size:32px;
-
-}
-
-.status{
-
-margin-bottom:15px;
-
-}
-
-.table{
-
-max-width:100%;
-
-height:auto;
-
-min-height:250px;
-
-margin-top:20px;
-
-}
-
-.cup{
-
-width:100px;
-
-height:140px;
-
-}
-
-.cup-inner{
-
-border-radius:50px 50px 15px 15px;
-
-border-width:3px;
-
-}
-
-#ball{
-
-width:35px;
-
-height:35px;
-
-bottom:40px;
-
-}
-
-.controls{
-
-margin-top:40px;
-
-}
-
-button{
-
-padding:12px 28px;
-
-font-size:0.9rem;
-
-}
-
-.info{
-
-font-size:0.85rem;
-
-padding:0 15px;
-
-text-align:center;
-
-}
-
-}
-
-@media (max-width:480px){
-
-.game-area{
-
-padding-top:60px;
-
-}
-
-.status h1{
-
-font-size:24px;
-
-}
-
-.status{
-
-margin-top:20px;
-
-margin-bottom:15px;
-
-}
-
-.table{
-
-min-height:200px;
-
-margin-top:15px;
-
-}
-
-.cup{
-
-width:80px;
-
-height:120px;
-
-}
-
-.cup-inner{
-
-border-radius:40px 40px 12px 12px;
-
-border-width:2px;
-
-}
-
-#ball{
-
-width:28px;
-
-height:28px;
-
-bottom:30px;
-
-}
-
-.controls{
-
-margin-top:30px;
-
-}
-
-button{
-
-padding:10px 22px;
-
-font-size:0.8rem;
-
-border-radius:15px;
-
-}
 
 }
