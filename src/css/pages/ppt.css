@@ -509,17 +509,6 @@ h1 {
    MOBILE
    ================================================== */
 @media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: var(--space-sm) var(--container-gutter);
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-xs);
-  }
 
   h1 {
     font-size: var(--text-headline-lg-mobile-size);
