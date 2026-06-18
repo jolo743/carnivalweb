@@ -4,7 +4,6 @@ main {
   padding: var(--space-xl) var(--container-gutter);
   text-align: center;
 }
-
 /* ==================================================
    HERO TITLE DEL JUEGO
    ================================================== */
@@ -19,7 +18,6 @@ h1 {
   text-shadow: var(--neon-text-glow-pink);
   margin-bottom: var(--space-lg);
 }
-
 /* ==================================================
    MARCADOR intentos
    ================================================== */
@@ -40,7 +38,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .marcador::before {
   content: "";
   position: absolute;
@@ -51,14 +48,12 @@ h1 {
   background: linear-gradient(to right, var(--glass-highlight), transparent);
   pointer-events: none;
 }
-
 .marcador-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-xs);
 }
-
 .marcador-label {
   font-family: var(--font-body);
   font-size: var(--text-label-sm-size);
@@ -67,7 +62,6 @@ h1 {
   text-transform: uppercase;
   color: var(--color-on-surface-variant);
 }
-
 .marcador-puntos {
   font-family: var(--font-display);
   font-size: 56px;
@@ -76,7 +70,6 @@ h1 {
   color: var(--color-secondary-container);
   text-shadow: var(--neon-text-glow-pink);
 }
-
 .marcador-separator {
   font-family: var(--font-display);
   font-size: var(--text-headline-lg-size);
@@ -84,7 +77,6 @@ h1 {
   color: var(--color-primary);
   text-shadow: var(--neon-text-glow-pink);
 }
-
 /* ==================================================
    TABLERO — grid + perspective para 3D
    ================================================== */
@@ -105,7 +97,6 @@ h1 {
   overflow: hidden;
   perspective: 1000px;
 }
-
 .tablero::before {
   content: "";
   position: absolute;
@@ -116,7 +107,6 @@ h1 {
   background: linear-gradient(to right, var(--glass-highlight), transparent);
   pointer-events: none;
 }
-
 /* ==================================================
    CARTA — flip 3D
    ================================================== */
@@ -134,25 +124,21 @@ h1 {
   transition: transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
-
 .carta:hover:not(.flipped):not(.matched) {
   transform: scale(1.04);
   border-color: var(--color-secondary);
   box-shadow: var(--glow-cyan), var(--shadow-soft);
 }
-
 .carta-inner {
   position: absolute;
   inset: 0;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
 }
-
 .carta.flipped .carta-inner,
 .carta.matched .carta-inner {
   transform: rotateY(180deg);
 }
-
 .carta-back,
 .carta-face {
   position: absolute;
@@ -165,22 +151,18 @@ h1 {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
 .carta-back {
   background-color: var(--color-surface-container-lowest);
 }
-
 .carta-face {
   transform: rotateY(180deg);
   background-color: var(--color-surface-container-low);
 }
-
 .carta.matched {
   border-color: var(--color-tertiary);
   box-shadow: var(--glow-gold), var(--shadow-soft);
   cursor: default;
 }
-
 /* ==================================================
    RESULTADO — debajo del tablero
    ================================================== */
@@ -203,7 +185,6 @@ h1 {
   box-shadow: var(--shadow-card);
   text-shadow: var(--neon-text-glow-pink);
 }
-
 /* ==================================================
   BOTÓN DE REINICIO
   ================================================== */
@@ -225,17 +206,14 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
 }
-
 .btn-reinicio:hover {
   background-color: rgba(0, 238, 252, 0.12);
   box-shadow: var(--glow-cyan);
   transform: translateY(-1px);
 }
-
 .btn-reinicio:active {
   transform: translateY(0);
 }
-
 /* ==================================================
    RESPONSIVE
    ================================================== */

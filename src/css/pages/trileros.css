@@ -3,287 +3,125 @@
    Tokens en src/css/style.css
    ================================================== */
 
-
-
 *{
-
 margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-font-family:var(--font-body);
-
+  padding:0;
+  box-sizing:border-box;
+  font-family:var(--font-body);
 }
 
 body{
-
 min-height:100vh;
-
-background:var(--color-background);
-
-color:var(--color-on-surface);
-
-overflow-x:hidden;
-
+  background:var(--color-background);
+  color:var(--color-on-surface);
+  overflow-x:hidden;
 }
-
 
 /* GAME */
 .game-area{
-
 height:calc(100vh - 120px);
-
-padding-top:60px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:flex-start;
-
-
-background:
+  padding-top:60px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  background:
 radial-gradient(circle,#182238,#0b1326);
-
 }
 
 .status{
-
 text-align:center;
-
-margin-top:30px;
-
-margin-bottom:80px;
-
+  margin-top:30px;
+  margin-bottom:80px;
 }
 
 .status h1{
-
-
 font-size:48px;
-
-
-color:var(--color-secondary-container);
-
-
-text-shadow:
-
-0 0 20px var(--color-secondary-container);
-
-
+  color:var(--color-secondary-container);
+  text-shadow:
+  0 0 20px var(--color-secondary-container);
 }
-
-
 
 .status p{
-
-
 opacity:.7;
-
 }
-
-
-
-
 
 /* VASOS */
 
 .table{
-
 width:900px;
-
-height:350px;
-
-
-display:flex;
-
-justify-content:space-around;
-
-align-items:flex-end;
-
-
-position:relative;
-
-margin-top:80px;
-
-
+  height:350px;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  position:relative;
+  margin-top:80px;
 }
-
 
 .cup{
-
 width:170px;
-
-height:210px;
-
-cursor:pointer;
-
+  height:210px;
+  cursor:pointer;
 }
-
-
 
 .cup-inner{
-
-
 height:100%;
-
-
-background:#222a3d;
-
-
-border:
-
-4px solid rgba(0,238,252,.3);
-
-
-
-border-radius:
-
-70px 70px 20px 20px;
-
-
-transition:.5s;
-
-
+  background:#222a3d;
+  border:
+  4px solid rgba(0,238,252,.3);
+  border-radius:
+  70px 70px 20px 20px;
+  transition:.5s;
 }
-
-
-
 
 .cup:hover .cup-inner{
-
-
 transform:translateY(-20px);
-
-
 }
-
-
-
-
 
 #ball{
-
-
 position:absolute;
-
-
-bottom:60px;
-
-left:50%;
-
-
-width:45px;
-
-height:45px;
-
-
-background:var(--color-tertiary);
-
-
-border-radius:50%;
-
-
-box-shadow:
-
-0 0 30px var(--color-tertiary);
-
-
-opacity:0;
-
-
-transition:.5s;
-
-
+  bottom:60px;
+  left:50%;
+  width:45px;
+  height:45px;
+  background:var(--color-tertiary);
+  border-radius:50%;
+  box-shadow:
+  0 0 30px var(--color-tertiary);
+  opacity:0;
+  transition:.5s;
 }
-
-
-
 
 /* BOTONES */
 
-
 .controls{
-
 display:flex;
-
-gap:30px;
-
-margin-top:70px;
-
-
+  gap:30px;
+  margin-top:70px;
 }
-
-
 
 button{
-
-
 padding:15px 40px;
-
-
-border-radius:20px;
-
-
-background:transparent;
-
-
-border:2px solid var(--color-primary);
-
-
-color:white;
-
-
-font-weight:bold;
-
-
-cursor:pointer;
-
-
+  border-radius:20px;
+  background:transparent;
+  border:2px solid var(--color-primary);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
 }
-
-
-
 
 #shuffle-btn{
-
-
 background:var(--color-primary);
-
-color:var(--color-on-primary);
-
-
-box-shadow:
-
-0 0 30px rgba(255,75,137,.5);
-
-
+  color:var(--color-on-primary);
+  box-shadow:
+  0 0 30px rgba(255,75,137,.5);
 }
-
-
-
 
 button:hover{
-
-
 transform:scale(1.05);
-
-
 }
 
-
-
-
 .info{
-
-
 margin-top:25px;
-
-opacity:.7;
-
-
+  opacity:.7;
 }

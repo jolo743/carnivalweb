@@ -3,7 +3,6 @@
    Estilos sincronizados con la landing (Electric Fairground)
    Tokens en src/css/style.css
    ================================================== */
-
 /* ==================================================
    RESET & BASE
    ================================================== */
@@ -14,7 +13,6 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   background-color: var(--color-background);
   color: var(--color-on-background);
@@ -25,7 +23,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
 body {
   background-color: var(--color-background);
   color: var(--color-on-surface);
@@ -37,17 +34,14 @@ body {
   overflow-x: hidden;
   text-align: center;
 }
-
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
 }
-
 ul {
   list-style: none;
 }
-
 button {
   font-family: inherit;
   border: none;
@@ -55,7 +49,6 @@ button {
   cursor: pointer;
   color: inherit;
 }
-
 /* ==================================================
    MAIN LAYOUT
    ================================================== */
@@ -64,7 +57,6 @@ button {
   margin: 0 auto;
   padding: var(--space-xl) var(--container-gutter);
 }
-
 /* ==================================================
    HERO TITLE DEL JUEGO
    ================================================== */
@@ -79,7 +71,6 @@ h1 {
   text-shadow: var(--neon-text-glow-pink);
   margin-bottom: var(--space-lg);
 }
-
 /* ==================================================
    MARCADOR — glass card con tokens de la landing
    ================================================== */
@@ -100,7 +91,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .marcador::before {
   content: "";
   position: absolute;
@@ -111,14 +101,12 @@ h1 {
   background: linear-gradient(to right, var(--glass-highlight), transparent);
   pointer-events: none;
 }
-
 .marcador-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-xs);
 }
-
 .marcador-label {
   font-family: var(--font-body);
   font-size: var(--text-label-sm-size);
@@ -127,7 +115,6 @@ h1 {
   text-transform: uppercase;
   color: var(--color-on-surface-variant);
 }
-
 .marcador-puntos {
   font-family: var(--font-display);
   font-size: 56px;
@@ -136,7 +123,6 @@ h1 {
   color: var(--color-secondary-container);
   text-shadow: var(--neon-text-glow-cyan);
 }
-
 .marcador-separator {
   font-family: var(--font-display);
   font-size: var(--text-headline-lg-size);
@@ -144,7 +130,6 @@ h1 {
   color: var(--color-primary);
   text-shadow: var(--neon-text-glow-pink);
 }
-
 /* ==================================================
    ZONA DE ELECCIONES
    ================================================== */
@@ -156,14 +141,12 @@ h1 {
   margin: 0 auto var(--space-lg);
   flex-wrap: wrap;
 }
-
 .eleccion-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
 }
-
 .eleccion-label {
   font-family: var(--font-body);
   font-size: var(--text-label-sm-size);
@@ -172,7 +155,6 @@ h1 {
   text-transform: uppercase;
   color: var(--color-on-surface-variant);
 }
-
 .eleccion-display {
   width: 150px;
   height: 150px;
@@ -189,7 +171,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .eleccion-display::before {
   content: "";
   position: absolute;
@@ -200,17 +181,14 @@ h1 {
   background: linear-gradient(to right, var(--glass-highlight), transparent);
   pointer-events: none;
 }
-
 .eleccion-display.active {
   border-color: var(--color-primary);
   box-shadow: var(--neon-text-glow-pink);
 }
-
 .eleccion-placeholder {
   font-size: 3rem;
   color: var(--color-outline);
 }
-
 .vs-badge {
   font-family: var(--font-display);
   font-size: var(--text-headline-lg-size);
@@ -222,7 +200,6 @@ h1 {
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-default);
 }
-
 /* ==================================================
    BOTONES DE JUEGO
    ================================================== */
@@ -233,7 +210,6 @@ h1 {
   margin: 0 auto var(--space-lg);
   flex-wrap: wrap;
 }
-
 .btn-juego {
   position: relative;
   display: flex;
@@ -254,7 +230,6 @@ h1 {
   overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.3s ease;
 }
-
 .btn-juego::before {
   content: "";
   position: absolute;
@@ -266,26 +241,20 @@ h1 {
   pointer-events: none;
   border-radius: var(--radius-default) var(--radius-default) 0 0;
 }
-
-
 .btn-juego:active:not(:disabled) {
   transform: translateY(0);
 }
-
 .btn-juego:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
 .btn-icon {
   font-size: 2.5rem;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
 }
-
 .btn-text {
   font-weight: var(--text-label-lg-weight);
 }
-
 /* ==================================================
    RESULTADO
    ================================================== */
@@ -308,7 +277,6 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .resultado::before {
   content: "";
   position: absolute;
@@ -319,7 +287,6 @@ h1 {
   background: linear-gradient(to right, var(--glass-highlight), transparent);
   pointer-events: none;
 }
-
 /* ==================================================
    BOTÓN DE REINICIO (cyan secondary)
    ================================================== */
@@ -341,17 +308,14 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
 }
-
 .btn-reinicio:hover {
   background-color: rgba(0, 238, 252, 0.12);
   box-shadow: var(--glow-cyan);
   transform: translateY(-1px);
 }
-
 .btn-reinicio:active {
   transform: translateY(0);
 }
-
 /* ==================================================
    FOOTER
    ================================================== */
@@ -363,7 +327,6 @@ h1 {
   border-top: 1px solid var(--glass-highlight);
   box-shadow: var(--shadow-soft);
 }
-
 .footer-logo {
   font-family: var(--font-display);
   font-size: var(--text-headline-lg-size);
@@ -374,56 +337,45 @@ h1 {
   text-shadow: var(--neon-text-glow-pink);
   opacity: 0.85;
 }
-
 /* ==================================================
    MOBILE
    ================================================== */
 @media (max-width: 768px) {
-
   h1 {
-    font-size: var(--text-headline-lg-mobile-size);
+  font-size: var(--text-headline-lg-mobile-size);
     line-height: var(--text-headline-lg-mobile-line-height);
   }
-
   .marcador {
-    flex-direction: column;
+  flex-direction: column;
     gap: var(--space-sm);
     padding: var(--space-md);
     margin-bottom: var(--space-md);
   }
-
   .marcador-separator {
-    display: none;
+  display: none;
   }
-
   .marcador-puntos {
-    font-size: 40px;
+  font-size: 40px;
   }
-
   .zona-elecciones {
-    gap: var(--space-sm);
+  gap: var(--space-sm);
   }
-
   .eleccion-display {
-    width: 120px;
+  width: 120px;
     height: 120px;
     font-size: 4rem;
   }
-
   .vs-badge {
-    font-size: var(--text-headline-lg-mobile-size);
+  font-size: var(--text-headline-lg-mobile-size);
   }
-
   .botones {
-    gap: var(--space-sm);
+  gap: var(--space-sm);
   }
-
   .btn-juego {
-    padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space-md);
     min-width: 100px;
   }
-
   .btn-icon {
-    font-size: 2rem;
+  font-size: 2rem;
   }
 }

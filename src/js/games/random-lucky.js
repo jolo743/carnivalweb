@@ -42,19 +42,7 @@
           const resultText = document.getElementById('resultText');
           const resultClose = document.getElementById('resultClose');
           const spinCounter = document.getElementById('spinCounter');
-          const confettiCanvas = document.getElementById('confettiCanvas');
-          const confettiCtx = confettiCanvas.getContext('2d');
           const nameForm = document.getElementById('nameForm');
-          // ============================================
-          // CONFIGURACIÓN DE CANVAS
-          // ============================================
-          // Ajusta el tamaño del canvas de confeti al de la ventana
-          function resizeConfettiCanvas() {
-              confettiCanvas.width = window.innerWidth;
-              confettiCanvas.height = window.innerHeight;
-          }
-          resizeConfettiCanvas();
-          window.addEventListener('resize', resizeConfettiCanvas);
 
           // ============================================
           // WEB AUDIO API - SONIDO DE GIRO
@@ -109,64 +97,6 @@
                   oscillator.start(startTime);
                   oscillator.stop(startTime + 0.3);
               });
-          }
-
-          // ============================================
-          // SISTEMA DE CONFETI
-          // ============================================
-          let confettiParticles = [];
-          let confettiAnimationId = null;
-
-          // Crea las partículas de confeti
-          function createConfetti() {
-              const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#F7DC6F',
-  '#BB8FCE', '#85C1E2'];
-              confettiParticles = [];
-
-              for (let i = 0; i < 150; i++) {
-                  confettiParticles.push({
-                      x: Math.random() * confettiCanvas.width,
-                      y: Math.random() * confettiCanvas.height - confettiCanvas.height,
-                      width: Math.random() * 10 + 5,
-                      height: Math.random() * 6 + 4,
-                      color: colors[Math.floor(Math.random() * colors.length)],
-                      speedY: Math.random() * 3 + 2,
-                      speedX: Math.random() * 4 - 2,
-                      rotation: Math.random() * 360,
-                      rotationSpeed: Math.random() * 10 - 5
-                  });
-              }
-              animateConfetti();
-          }
-
-          // Anima el confeti cayendo
-          function animateConfetti() {
-              confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-
-              confettiParticles.forEach((p, index) => {
-                  p.y += p.speedY;
-                  p.x += p.speedX;
-                  p.rotation += p.rotationSpeed;
-
-                  confettiCtx.save();
-                  confettiCtx.translate(p.x, p.y);
-                  confettiCtx.rotate((p.rotation * Math.PI) / 180);
-                  confettiCtx.fillStyle = p.color;
-                  confettiCtx.fillRect(-p.width / 2, -p.height / 2, p.width, p.height);
-                  confettiCtx.restore();
-
-                  // Elimina partículas que salen de la pantalla
-                  if (p.y > confettiCanvas.height) {
-                      confettiParticles.splice(index, 1);
-                  }
-              });
-
-              // Continúa la animación mientras haya partículas
-              if (confettiParticles.length > 0) {
-                  confettiAnimationId = requestAnimationFrame(animateConfetti);
-              } else {
-                  confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-              }
           }
 
           // ============================================
@@ -237,8 +167,7 @@
                   // Mueve el foco al botón de cerrar para usuarios de teclado/lector
                   resultClose.focus();
 
-                  // Dispara el confeti y el sonido de victoria
-                  createConfetti();
+                  // Reproduce el sonido de victoria
                   playWinSound();
               }, 4000);
           }
