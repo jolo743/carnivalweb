@@ -1,23 +1,7 @@
-:root{
-
-
---background:#0b1326;
-
---surface:#171f33;
-
---pink:#ff4b89;
-
---pink-light:#ffb1c3;
-
---cyan:#00eefc;
-
---gold:#fdbc00;
-
---text:#dae2fd;
-
-
-}
-
+/* ==================================================
+   TRILEROS
+   Tokens en src/css/style.css
+   ================================================== */
 
 
 
@@ -29,7 +13,7 @@ padding:0;
 
 box-sizing:border-box;
 
-font-family:"Plus Jakarta Sans",sans-serif;
+font-family:var(--font-body);
 
 }
 
@@ -37,9 +21,9 @@ body{
 
 min-height:100vh;
 
-background:var(--background);
+background:var(--color-background);
 
-color:var(--text);
+color:var(--color-on-surface);
 
 overflow-x:hidden;
 
@@ -77,38 +61,18 @@ margin-bottom:80px;
 
 }
 
-.site-header {
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(11,19,38,.85);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,.1);
-
-}
-
 .status h1{
 
 
 font-size:48px;
 
 
-color:var(--cyan);
+color:var(--color-secondary-container);
 
 
 text-shadow:
 
-0 0 20px var(--cyan);
+0 0 20px var(--color-secondary-container);
 
 
 }
@@ -218,7 +182,7 @@ width:45px;
 height:45px;
 
 
-background:var(--gold);
+background:var(--color-tertiary);
 
 
 border-radius:50%;
@@ -226,7 +190,7 @@ border-radius:50%;
 
 box-shadow:
 
-0 0 30px var(--gold);
+0 0 30px var(--color-tertiary);
 
 
 opacity:0;
@@ -268,7 +232,7 @@ border-radius:20px;
 background:transparent;
 
 
-border:2px solid var(--pink);
+border:2px solid var(--color-primary);
 
 
 color:white;
@@ -288,9 +252,9 @@ cursor:pointer;
 #shuffle-btn{
 
 
-background:var(--pink);
+background:var(--color-primary);
 
-color:#66002c;
+color:var(--color-on-primary);
 
 
 box-shadow:

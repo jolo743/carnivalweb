@@ -42,7 +42,6 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-shadow: var(--glow-pink);
 }
 
 /* LINKS */
