@@ -73,7 +73,7 @@ h1 {
   font-size: 56px;
   font-weight: var(--text-display-sm-weight);
   line-height: 1;
-  color: var(--color-tertiary);
+  color: var(--color-secondary-container);
   text-shadow: var(--neon-text-glow-pink);
 }
 
@@ -194,7 +194,7 @@ h1 {
   font-weight: var(--text-label-lg-weight);
   letter-spacing: var(--text-label-lg-letter-spacing);
   text-transform: uppercase;
-  color: var(--color-tertiary);
+  color: var(--color-secondary-container);
   background-color: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -205,8 +205,8 @@ h1 {
 }
 
 /* ==================================================
-   BOTÓN DE REINICIO
-   ================================================== */
+  BOTÓN DE REINICIO
+  ================================================== */
 .btn-reinicio {
   position: relative;
   display: inline-flex;
