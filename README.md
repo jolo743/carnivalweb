@@ -44,44 +44,57 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 
 ```
 carnivalweb/
-├── index.html                        ← Landing page principal
+├── assets/
+│   ├── fonts/
+│   ├── images/
+│   │   ├── celebration.png
+│   │   ├── circus.png
+│   │   ├── controller.png
+│   │   ├── espalda.png
+│   │   ├── parejas.png
+│   │   ├── piedra-papel-tiejras.png
+│   │   ├── popcorn.png
+│   │   ├── rocket.png
+│   │   ├── ruleta-definitiva.png
+│   │   ├── ruleta.png
+│   │   ├── sharp-five.png
+│   │   ├── sparkle.png
+│   │   ├── ticket.png
+│   │   ├── tiro-al-blanco.png
+│   │   └── trileros.png
+│   └── sounds/
+├── docs/
+│   ├── BACKLOG_LINEAR.md
+│   ├── DESIGN.md
+│   ├── FLOWCHARTS.md
+│   ├── GITFLOW.md
+│   ├── PRODUCT_OWNER.md
+│   └── USER_STORIES.md
+├── html/
+│   ├── parejas.html
+│   ├── ppt.html
+│   ├── random-lucky.html
+│   └── trileros.html
 ├── src/
 │   ├── css/
-│   │   └── style.css                 ← Estilos globales y variables CSS
+│   │   ├── layout/
+│   │   │   ├── footer.css
+│   │   │   └── navbar.css
+│   │   ├── pages/
+│   │   │   ├── parejas.css
+│   │   │   ├── ppt.css
+│   │   │   ├── random-lucky.css
+│   │   │   └── trileros.css
+│   │   └── style.css
 │   └── js/
-│       └── script.js                 ← JS global (navegación, etc.)
-│
-├── games/
-│   ├── random-lucky/                 ← Claudia
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── trileros/                     ← Boris
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── parejas/                      ← Jordi
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   ├── tiro-al-blanco/               ← por asignar
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   └── piedra-papel-tijera/          ← Jean (extra)
-│       ├── index.html
-│       ├── style.css
+│       ├── games/
+│       │   ├── parejas.js
+│       │   ├── ppt.js
+│       │   ├── random-lucky.js
+│       │   └── trileros.js
 │       └── script.js
-│
-├── assets/
-│   ├── images/                       ← Imágenes compartidas
-│   ├── sounds/                       ← Efectos de sonido globales
-│   └── fonts/                        ← Tipografías
-│
-└── docs/
-    ├── USER_STORIES.md               ← Historias de usuario + backlog
-    ├── GITFLOW.md                    ← Guía de ramas y commits
-    └── FLOWCHARTS.md                 ← Algoritmos de cada juego
+├── index.html
+└── README.md
 ```
 
 ---
