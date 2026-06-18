@@ -9,10 +9,10 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 | Nombre  | Juego asignado              | Rama de trabajo              |
 |---------|-----------------------------|------------------------------|
 | Claudia | Random Lucky                | `feature/random-lucky`       |
-| Boris   | Trileros                    | `feature/trileros`           |
+| Claudia | Trileros                    | `feature/trileros`           |
 | Jordi   | Parejas                     | `feature/parejas`            |
 | Jean    | Piedra, Papel o Tijeras     | `feature/piedra-papel-tijera`|
-| Todos   | Tiro al Blanco *(a definir)*| `feature/tiro-al-blanco`     |
+
 
 ---
 
@@ -21,10 +21,9 @@ Plataforma de juegos de feria online desarrollada para **AZARGame** como MVP de 
 | Juego                  | Descripción                                                        |
 |------------------------|--------------------------------------------------------------------|
 | Random Lucky           | Asigna mensajes de suerte aleatorios a una lista de nombres        |
-| Trileros               | Adivina en qué vaso está escondida la bolita                       |
+| Piedra, papel o tijera | 3 rondas contra la máquina                                         |
 | Parejas                | Encuentra todas las parejas de cartas en el menor tiempo posible   |
-| Tiro al Blanco         | Apunta y derriba los blancos en movimiento antes de que acabe el tiempo |
-| Piedra, Papel o Tijeras *(extra)* | 3 rondas contra la máquina                             |
+| Trileros  *(extra)*    | Adivina en qué vaso está escondida la bolita                       |
 
 ---
 
@@ -126,7 +125,7 @@ start index.html  # Windows
 | Sprint | Fechas        | Objetivo                                      |
 |--------|---------------|-----------------------------------------------|
 | 1      | Días 1 – 4    | Estructura, HTML semántico, lógica base de cada juego |
-| 2      | Días 5 – 8    | CSS, animaciones, sonidos, responsive, pulido |
+| 2      | Días 5 – 8    | CSS, animaciones, responsive, pulido |
 
 ---
 
