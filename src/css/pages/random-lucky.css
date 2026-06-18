@@ -1,37 +1,7 @@
 /* ================================
    RANDOM LUCKY - Neon Glass Theme
+   Tokens en src/css/style.css
 ================================ */
-
-
-:root {
-
-    --background: #0b1326;
-
-    --surface: rgba(11, 19, 38, 0.75);
-
-    --pink: #ff4b89;
-    --pink-light: #ffb1c3;
-
-    --cyan: #00eefc;
-    --cyan-light: #d3fbff;
-
-    --gold: #fdbc00;
-
-    --text: #dae2fd;
-    --text-soft: #e5bcc4;
-
-    --border: rgba(255, 255, 255, .12);
-
-    --shadow:
-        0 12px 40px rgba(6, 14, 32, .45);
-
-    --glow-pink:
-        0 0 12px rgba(255, 75, 137, .6),
-        0 0 24px rgba(255, 75, 137, .35);
-
-    --glow-cyan:
-        0 0 12px rgba(0, 238, 252, .6);
-}
 
 
 /* RESET */
@@ -43,7 +13,7 @@
 
     box-sizing: border-box;
 
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: var(--font-body);
 
 }
 
@@ -57,9 +27,9 @@ body {
 
     min-height: 100vh;
 
-    background: var(--background);
+    background: var(--color-background);
 
-    color: var(--text);
+    color: var(--color-on-surface);
 
     overflow-x: hidden;
 
@@ -76,17 +46,17 @@ body {
 
     margin: 40px auto;
 
-    background: var(--surface);
+    background: var(--glass-bg);
 
     backdrop-filter: blur(12px);
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--glass-border);
 
     border-radius: 24px;
 
     padding: 32px;
 
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
 
     text-align: center;
 
@@ -99,9 +69,9 @@ body {
 
 .app-header h1 {
 
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-display);
 
-    color: var(--pink-light);
+    color: var(--color-primary);
 
 
     font-size: 2.3rem;
@@ -112,7 +82,7 @@ body {
 
     text-shadow:
 
-        0 0 10px rgba(255, 75, 137, .5);
+        var(--neon-text-glow-pink);
 
 }
 
@@ -120,7 +90,7 @@ body {
 
 .subtitle {
 
-    color: var(--text-soft);
+    color: var(--color-on-surface-variant);
 
     margin-top: 10px;
 
@@ -150,7 +120,7 @@ label {
     margin-bottom: 8px;
 
 
-    color: var(--cyan-light);
+    color: var(--color-secondary);
 
 }
 
@@ -165,13 +135,13 @@ input[type="text"] {
     padding: 12px 16px;
 
 
-    background: #060e20;
+    background: var(--color-surface-container-lowest);
 
 
     color: white;
 
 
-    border: 1px solid var(--cyan);
+    border: 1px solid var(--color-secondary-container);
 
 
     border-radius: 12px;
@@ -225,7 +195,7 @@ input[type="text"]:focus {
     border-radius: 50%;
 
 
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
 
 }
 
@@ -248,7 +218,7 @@ input[type="text"]:focus {
             #bb0058);
 
 
-    color: #66002c;
+    color: var(--color-on-primary);
 
 
     border: none;
@@ -290,7 +260,7 @@ input[type="text"]:focus {
 
     margin-top: 15px;
 
-    color: var(--cyan-light);
+    color: var(--color-secondary);
 
 }
 
@@ -311,7 +281,7 @@ input[type="text"]:focus {
     background: rgba(255, 255, 255, .05);
 
 
-    border-left: 4px solid var(--cyan);
+    border-left: 4px solid var(--color-secondary-container);
 
 
     border-radius: 14px;
@@ -325,7 +295,7 @@ input[type="text"]:focus {
 
 .instructions h2 {
 
-    color: var(--pink-light);
+    color: var(--color-primary);
 
 }
 
@@ -401,7 +371,7 @@ input[type="text"]:focus {
     background: rgba(11, 19, 38, .95);
 
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--glass-border);
 
 
     border-radius: 24px;
@@ -412,7 +382,7 @@ input[type="text"]:focus {
 
     box-shadow:
 
-        var(--shadow),
+        var(--shadow-card),
 
         var(--glow-pink);
 
@@ -441,7 +411,7 @@ input[type="text"]:focus {
     border: none;
 
 
-    color: var(--pink);
+    color: var(--color-primary);
 
 
     font-size: 30px;
@@ -456,7 +426,7 @@ input[type="text"]:focus {
 .result-eyebrow {
 
 
-    color: var(--pink-light);
+    color: var(--color-primary);
 
 
 }
@@ -469,7 +439,7 @@ input[type="text"]:focus {
     margin-top: 20px;
 
 
-    color: var(--cyan-light);
+    color: var(--color-secondary);
 
 
 }
@@ -482,7 +452,7 @@ input[type="text"]:focus {
     display: block;
 
 
-    color: var(--pink-light);
+    color: var(--color-primary);
 
 
     font-size: 1.4rem;
